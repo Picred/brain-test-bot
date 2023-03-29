@@ -1,0 +1,6 @@
+pytest
+pytest-mock
+pytest-cov
+pylint
+python_telegram_bot==13.14
+telegram==0.0.1
