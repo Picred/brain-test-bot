@@ -1,19 +1,19 @@
 from telegram import BotCommand
-from telegram.ext import(
-	Updater,
-	MessageHandler,
-	CommandHandler,
-	Filters
-)
+from telegram.ext import(Updater, MessageHandler, CommandHandler, Filters)
 import logging
-from modules.handlers.start import start
+
+from src.handlers.start import start
+from src.handlers.difficolta import difficolta
+from src.handlers.livello_selezionato import livello_selezionato
 
 TOKEN = open("token.txt", "r").read().strip()
 
 # Aggiunge l'anteprima dei comandi con la relativa descrizione
 def add_commands(up: Updater) -> None:
     commands = [
-	BotCommand("start", "Messaggio di benvenuto") ]
+	BotCommand("start", "Messaggio di benvenuto"), 
+	BotCommand("difficolta", "Imposta la difficolta") 
+	]
     up.bot.set_my_commands(commands=commands)
 
 
@@ -29,8 +29,11 @@ def main():
 	
     # Command handlers
 	dp.add_handler(CommandHandler('start', start))
+	dp.add_handler(CommandHandler('difficolta', difficolta))
 	
     # Message handlers
+	dp.add_handler(MessageHandler(Filters.text, livello_selezionato))
+
 
 	add_commands(updater)
 	
