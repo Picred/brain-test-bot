@@ -1,21 +1,12 @@
-from telegram import BotCommand
 from telegram.ext import(Updater, MessageHandler, CommandHandler, Filters)
 import logging
 
 from src.handlers.start import start
 from src.handlers.difficolta import difficolta
+from src.handlers.add_commands import add_commands
 from src.handlers.livello_selezionato import livello_selezionato
 
 TOKEN = open("token.txt", "r").read().strip()
-
-# Aggiunge l'anteprima dei comandi con la relativa descrizione
-def add_commands(up: Updater) -> None:
-    commands = [
-	BotCommand("start", "Messaggio di benvenuto"), 
-	BotCommand("difficolta", "Imposta la difficolta") 
-	]
-    up.bot.set_my_commands(commands=commands)
-
 
 # Funzione main del programma per l'avvio del bot
 def main():
