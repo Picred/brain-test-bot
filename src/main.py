@@ -3,8 +3,10 @@ import logging
 
 from handlers.start import start
 from handlers.difficolta import difficolta
+from handlers.categoria import categoria
 from handlers.add_commands import add_commands
 from handlers.livello_selezionato import livello_selezionato
+from handlers.categoria_selezionata import categoria_selezionata
 
 TOKEN = open("token.txt", "r", encoding="utf-8").read().strip()
 
@@ -24,9 +26,12 @@ def main():
 # Command handlers
     dp.add_handler(CommandHandler('start', start))
     dp.add_handler(CommandHandler('difficolta', difficolta))
+    dp.add_handler(CommandHandler('categoria', categoria))
 
 # Message handlers
+    dp.add_handler(MessageHandler(Filters.text, categoria_selezionata))
     dp.add_handler(MessageHandler(Filters.text, livello_selezionato))
+    
 
     add_commands(updater)
 
