@@ -14,7 +14,7 @@ pip install -r requirements.txt
 Una volta installate tutte le dipendenze, crea un file chiamato `token.txt` nella directory principale e aggiungi il tuo token di autenticazione del bot.
 Infine, esegui il bot utilizzando il seguente comando:
 ```shell
-python main.py
+python src/main.py
 ```
 
 # Contributi
