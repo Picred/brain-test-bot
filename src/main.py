@@ -14,7 +14,7 @@ from src.handlers.categoria_selezionata import categoria_selezionata
 with open("token.txt", "r", encoding="utf-8") as f:
     TOKEN = f.read().strip()
 
-with open('src/data/livelli.json', 'r') as f:
+with open('src/data/livelli.json', 'r', encoding="utf-8") as f:
     livelli = list(json.load(f))
 
 def main():
