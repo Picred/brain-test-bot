@@ -1,5 +1,6 @@
 from telegram.ext import (Updater, MessageHandler, CommandHandler, Filters)
 import logging
+import json
 
 from src.handlers.start import start
 from src.handlers.categoria import categoria
@@ -13,8 +14,8 @@ from src.handlers.categoria_selezionata import categoria_selezionata
 with open("token.txt", "r", encoding="utf-8") as f:
     TOKEN = f.read().strip()
 
-# Funzione main del programma per l'avvio del bot
-
+with open('src/data/livelli.json', 'r', encoding="utf-8") as f:
+    livelli = list(json.load(f))
 
 def main():
     logging.basicConfig(
@@ -32,9 +33,8 @@ def main():
     dp.add_handler(CommandHandler('categoria', categoria))
 
 # Message handlers
+    dp.add_handler(MessageHandler(Filters.text & Filters.regex(f"({'|'.join(livelli)})"), livello_selezionato))
     dp.add_handler(MessageHandler(Filters.text, categoria_selezionata))
-    dp.add_handler(MessageHandler(Filters.text, livello_selezionato))
-    
 
     add_commands(updater)
 
