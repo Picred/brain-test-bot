@@ -17,6 +17,9 @@ with open("token.txt", "r", encoding="utf-8") as f:
 with open('src/data/livelli.json', 'r', encoding="utf-8") as f:
     livelli = list(json.load(f))
 
+with open('src/data/categorie.json', 'r', encoding="utf-8") as f:
+    categorie = list(json.load(f))
+
 def main():
     logging.basicConfig(
         format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO)
@@ -34,7 +37,7 @@ def main():
 
 # Message handlers
     dp.add_handler(MessageHandler(Filters.text & Filters.regex(f"({'|'.join(livelli)})"), livello_selezionato))
-    dp.add_handler(MessageHandler(Filters.text, categoria_selezionata))
+    dp.add_handler(MessageHandler(Filters.text & Filters.regex(f"({'|'.join(categorie)})"), categoria_selezionata))
 
     add_commands(updater)
 
