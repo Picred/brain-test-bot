@@ -2,12 +2,17 @@ from telegram.ext import (Updater, MessageHandler, CommandHandler, Filters)
 import logging
 import json
 
-from handlers.start import start
-from handlers.difficolta import difficolta
-from handlers.add_commands import add_commands
-from handlers.livello_selezionato import livello_selezionato
+from src.handlers.start import start
+from src.handlers.categoria import categoria
+from src.handlers.difficolta import difficolta
+from src.handlers.add_commands import add_commands
+from src.handlers.livello_selezionato import livello_selezionato
+from src.handlers.categoria_selezionata import categoria_selezionata
 
-TOKEN = open("token.txt", "r", encoding="utf-8").read().strip()
+
+
+with open("token.txt", "r", encoding="utf-8") as f:
+    TOKEN = f.read().strip()
 
 with open('src/data/livelli.json', 'r') as f:
     livelli = list(json.load(f))
@@ -25,9 +30,11 @@ def main():
 # Command handlers
     dp.add_handler(CommandHandler('start', start))
     dp.add_handler(CommandHandler('difficolta', difficolta))
+    dp.add_handler(CommandHandler('categoria', categoria))
 
 # Message handlers
     dp.add_handler(MessageHandler(Filters.text & Filters.regex(f"({'|'.join(livelli)})"), livello_selezionato))
+    dp.add_handler(MessageHandler(Filters.text, categoria_selezionata))
 
     add_commands(updater)
 
