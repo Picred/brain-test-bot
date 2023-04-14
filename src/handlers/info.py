@@ -4,7 +4,6 @@ from telegram.ext import CallbackContext
 def info(update: Update, context: CallbackContext) -> None:
 
     username = str(update.message.chat.username)
-
     categoria = "Nessuna"
     livello = "Nessuna"
 
@@ -16,5 +15,5 @@ def info(update: Update, context: CallbackContext) -> None:
 
     context.bot.sendMessage(chat_id=update.message.chat_id,text="Username: " + username + 
                                                                 "\nCategoria: " + categoria +
-                                                                "\nDifficoltà: " + livello + 
-                                                                "Per modificare categoria e difficoltà usare rispettivamente i comandi /categoria e /difficolta")
+                                                                "\nDifficoltà: " + livello)
+
