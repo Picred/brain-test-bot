@@ -1,0 +1,70 @@
+{
+    "domande": [
+        {
+            "categoria": "Matematica",
+            "testo": "Qual e' il risultato di 2+2?",
+            "risposte": [
+                {
+                    "testo": "3",
+                    "corretta": false
+                },
+                {
+                    "testo": "4",
+                    "corretta": true
+                },
+                {
+                    "testo": "5",
+                    "corretta": false
+                },
+                {
+                    "testo": "6",
+                    "corretta": false
+                }
+            ]
+        },
+
+        {
+            "categoria": "Italiano",
+            "testo": "Chi ha scritto la Divina Commedia?",
+            "risposte": [
+                {
+                    "testo": "Dante Alighieri",
+                    "corretta": true
+                },
+                {
+                    "testo": "Petrarca",
+                    "corretta": false
+                },
+                {
+                    "testo": "Boccaccio",
+                    "corretta": false
+                },
+                {
+                    "testo": "Ariosto",
+                    "corretta": false
+                }
+            ]
+        },
+        {
+            "testo": "Qual e' il risultato di 3*4?",
+            "risposte": [
+                {
+                    "testo": "7",
+                    "corretta": false
+                },
+                {
+                    "testo": "10",
+                    "corretta": false
+                },
+                {
+                    "testo": "11",
+                    "corretta": false
+                },
+                {
+                    "testo": "12",
+                    "corretta": true
+                }
+            ]
+        }
+    ]
+}
