@@ -2,12 +2,13 @@ from telegram.ext import (Updater, MessageHandler, CommandHandler, Filters)
 import logging
 import json
 
-from src.handlers.start import start
-from src.handlers.categoria import categoria
-from src.handlers.difficolta import difficolta
-from src.handlers.add_commands import add_commands
-from src.handlers.livello_selezionato import livello_selezionato
-from src.handlers.categoria_selezionata import categoria_selezionata
+from handlers.start import start
+from handlers.categoria import categoria
+from handlers.difficolta import difficolta
+from handlers.add_commands import add_commands
+from handlers.livello_selezionato import livello_selezionato
+from handlers.categoria_selezionata import categoria_selezionata
+from handlers.info import info
 
 
 
@@ -34,6 +35,7 @@ def main():
     dp.add_handler(CommandHandler('start', start))
     dp.add_handler(CommandHandler('difficolta', difficolta))
     dp.add_handler(CommandHandler('categoria', categoria))
+    dp.add_handler(CommandHandler('info', info))
 
 # Message handlers
     dp.add_handler(MessageHandler(Filters.text & Filters.regex(f"({'|'.join(livelli)})"), livello_selezionato))
