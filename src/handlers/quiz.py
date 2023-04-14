@@ -1,6 +1,6 @@
 from telegram import Update
 from telegram.ext import CallbackContext
-from domanda import domanda
+from .domanda import domanda
 
 def quiz(update: Update, context: CallbackContext) -> None:
     if 'domanda_corrente' in context.user_data:

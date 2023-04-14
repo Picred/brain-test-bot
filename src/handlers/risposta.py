@@ -1,6 +1,6 @@
 from telegram import Update
 from telegram.ext import CallbackContext
-from domanda import domanda
+from .domanda import domanda
 import json
 
 with open('src/data/facile.json', 'r', encoding="utf-8") as f:
