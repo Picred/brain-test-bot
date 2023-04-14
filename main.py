@@ -21,7 +21,7 @@ with open('src/data/livelli.json', 'r', encoding="utf-8") as f:
 with open('src/data/categorie.json', 'r', encoding="utf-8") as f:
     categorie = list(json.load(f))
 
-def main():
+def main() -> None:
     logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO)
     logging.info('Starting bot...')
 
