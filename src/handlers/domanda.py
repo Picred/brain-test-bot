@@ -5,7 +5,7 @@ import json
 with open('src/data/facile.json', 'r', encoding="utf-8") as f:
     data = json.load(f)['domande']
 
-def domanda(update: Update, context: CallbackContext):
+def domanda(update: Update, context: CallbackContext) -> None:
     domanda_corrente = context.user_data['domanda_corrente']
     question = data[domanda_corrente]
     testo = question['testo']
