@@ -14,6 +14,8 @@ def risposta(update: Update, context: CallbackContext):
     question = data[question_index]
     answer = question['risposte'][answer_index]
 
+    # Rimuove la tastiera con le risposte
+    context.bot.editMessageReplyMarkup(chat_id=query.message.chat_id, message_id=query.message.message_id)
     # Verifica se la risposta è True
     if answer['corretta']:
         context.bot.send_message(chat_id=query.message.chat_id, text="Hai risposto correttamente!")
