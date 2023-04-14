@@ -1,5 +1,5 @@
 from telegram import Update
-from telegram.ext import CallbackContext, Filters
+from telegram.ext import CallbackContext
 
 start_txt = "Benvenuto al Brain Test Quiz! Scegli la categoria: /difficolta o /categoria"
 
