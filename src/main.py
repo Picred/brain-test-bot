@@ -9,6 +9,7 @@ from src.handlers.difficolta import difficolta
 from src.handlers.add_commands import add_commands
 from src.handlers.livello_selezionato import livello_selezionato
 from src.handlers.categoria_selezionata import categoria_selezionata
+from src.handlers.info import info
 
 
 with open("token.txt", "r", encoding="utf-8") as f:
@@ -31,6 +32,7 @@ def main():
     dp.add_handler(CommandHandler('start', start))
     dp.add_handler(CommandHandler('difficolta', difficolta))
     dp.add_handler(CommandHandler('categoria', categoria))
+    dp.add_handler(CommandHandler('info', info))
     dp.add_handler(CommandHandler('quiz', quiz))
 
 # Message handlers

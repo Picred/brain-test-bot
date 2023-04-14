@@ -6,6 +6,7 @@ def add_commands(up: Updater) -> None:
         BotCommand("start", "Messaggio di benvenuto"),
         BotCommand("difficolta", "Imposta la difficolta"),
         BotCommand("categoria", "Imposta la categoria"),
+        BotCommand("info", "Mostra categoria e difficoltà selezionate"),
         BotCommand("quiz", "Inizia il quiz")
     ]
     up.bot.set_my_commands(commands=commands)
