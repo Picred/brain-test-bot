@@ -108,7 +108,7 @@
           "testo": "Quale lettera passa dall'essere una consonante a una vocale semplicemente capovolgendola?",
           "risposte": [
             {
-              "testo_risposta": "e", "corretta": false
+              "testo_risposta": "u", "corretta": false
             },
             {
               "testo_risposta": "t", "corretta": false
@@ -142,16 +142,16 @@
           "testo": "Qual è il modo più corretto di rispondere: 8+7 FA 16 oppure 8+7 FANNO 16?",
           "risposte": [
             {
-              "testo_risposta": "fa", "corretta": false
+              "testo_risposta": "Fa", "corretta": false
             },
             {
-              "testo_risposta": "fanno", "corretta": false
+              "testo_risposta": "Fanno", "corretta": false
             },
             {
-              "testo_risposta": "entrambi i modi sono corretti", "corretta": true
+              "testo_risposta": "Entrambi i modi sono corretti", "corretta": false
             },
             {
-              "testo_risposta": "nessuna delle precedenti", "corretta": false
+              "testo_risposta": "Nessuna delle precedenti", "corretta": true
             }
           ]
         },
@@ -159,7 +159,7 @@
           "testo": "Quale animale mangia con la coda?",
           "risposte": [
             {
-              "testo_risposta": "Cane", "corretta": true
+              "testo_risposta": "Cane", "corretta": false
             },
             {
               "testo_risposta": "Gatto", "corretta": false
@@ -168,7 +168,7 @@
               "testo_risposta": "Cavallo", "corretta": false
             },
             {
-              "testo_risposta": "Tutte le risposte precedenti", "corretta": false
+              "testo_risposta": "Tutte le risposte precedenti", "corretta": true
             }
           ]
         }

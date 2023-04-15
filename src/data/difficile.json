@@ -142,16 +142,16 @@
           "testo": "Un treno ha percorso i 4/5 del tragitto. Sapendo che è partito da 36 minuti, tra quanto arriverà a destinazione?",
           "risposte": [
             {
-              "testo_risposta": "8", "corretta": false
+              "testo_risposta": "8 min", "corretta": false
             },
             {
-              "testo_risposta": "7", "corretta": false
+              "testo_risposta": "7 min", "corretta": false
             },
             {
-              "testo_risposta": "10", "corretta": false
+              "testo_risposta": "10 min", "corretta": false
             },
             {
-              "testo_risposta": "9", "corretta": true
+              "testo_risposta": "9 min", "corretta": true
             }
           ]
         },

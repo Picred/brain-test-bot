@@ -5,9 +5,7 @@ import json
 with open("src/data/categorie.json", "r", encoding="utf-8") as f:
     categorie = json.load(f)
 
-
 def categoria(update: Update, context: CallbackContext) -> None:
-    # Reset della categoria
     if 'categoria' in context.user_data:
         del context.user_data['categoria']
     reply_markup = ReplyKeyboardMarkup(
