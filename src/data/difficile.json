@@ -259,5 +259,92 @@
           }
         ]
       }
+    ],
+    "Cultura Generale": [
+        {
+          "testo": "Chi ha scritto <Il Processo>?",
+          "risposte": [
+            {
+              "testo_risposta": "Franz Kafka", "corretta": true
+            },
+            {
+              "testo_risposta": "Fyodor Dostoevsky", "corretta": false
+            },
+            {
+              "testo_risposta": "Leo Tolstoy", "corretta": false
+            },
+            {
+              "testo_risposta": "Gustave Flaubert", "corretta": false
+            }
+          ]
+        },
+        {
+          "testo": "In che anno è stato fondato il Partito Comunista Cinese?",
+          "risposte": [
+            {
+              "testo_risposta": "1921", "corretta": true
+            },
+            {
+              "testo_risposta": "1912", "corretta": false
+            },
+            {
+              "testo_risposta": "1935", "corretta": false
+            },
+            {
+              "testo_risposta": "1949", "corretta": false
+            }
+          ]
+        },
+        {
+          "testo": "Chi ha dipinto <Il Bacio>?",
+          "risposte": [
+            {
+              "testo_risposta": "Edvard Munch", "corretta": false
+            },
+            {
+              "testo_risposta": "Gustav Klimt", "corretta": true
+            },
+            {
+              "testo_risposta": "Henri Matisse", "corretta": false
+            },
+            {
+              "testo_risposta": "Pierre-Auguste Renoir", "corretta": false
+            }
+          ]
+        },
+        {
+          "testo": "Qual è il fiume più lungo del mondo?",
+          "risposte": [
+            {
+              "testo_risposta": "Mississippi", "corretta": false
+            },
+            {
+              "testo_risposta": "Yangtze", "corretta": false
+            },
+            {
+              "testo_risposta": "Amazonas", "corretta": false
+            },
+            {
+              "testo_risposta": "Nilo", "corretta": true
+            }
+          ]
+        },
+        {
+          "testo": "Chi ha scritto <Ulisse>?",
+          "risposte": [
+            {
+              "testo_risposta": "James Joyce", "corretta": true
+            },
+            {
+              "testo_risposta": "Ernest Hemingway", "corretta": false
+            },
+            {
+              "testo_risposta": "Virginia Woolf", "corretta": false
+            },
+            {
+              "testo_risposta": "William Faulkner", "corretta": false
+            }
+          ]
+        }
     ]
 }

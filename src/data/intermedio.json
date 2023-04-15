@@ -259,5 +259,92 @@
             }
           ]
         }
+    ],
+    "Cultura Generale": [
+        {
+          "testo": "Chi ha inventato il telefono?",
+          "risposte": [
+            {
+              "testo_risposta": "Guglielmo Marconi", "corretta": false
+            },
+            {
+              "testo_risposta": "Nikola Tesla", "corretta": false
+            },
+            {
+              "testo_risposta": "Thomas Edison", "corretta": false
+            },
+            {
+              "testo_risposta": "Alexander Graham Bell", "corretta": true
+            }
+          ]
+        },
+        {
+          "testo": "In che anno è stato fondato l’Impero Romano?",
+          "risposte": [
+            {
+              "testo_risposta": "753 a.C.", "corretta": false
+            },
+            {
+              "testo_risposta": "509 a.C.", "corretta": false
+            },
+            {
+              "testo_risposta": "14 d.C.", "corretta": false
+            },
+            {
+              "testo_risposta": "27 a.C.", "corretta": true
+            }
+          ]
+        },
+        {
+          "testo": "Chi ha scoperto l’America?",
+          "risposte": [
+            {
+              "testo_risposta": "Amerigo Vespucci", "corretta": false
+            },
+            {
+              "testo_risposta": "Cristoforo Colombo", "corretta": true
+            },
+            {
+              "testo_risposta": "Marco Polo", "corretta": false
+            },
+            {
+              "testo_risposta": "Ferdinando Magellano", "corretta": false
+            }
+          ]
+        },
+        {
+          "testo": "Qual è il pianeta più vicino al Sole?",
+          "risposte": [
+            {
+              "testo_risposta": "Marte", "corretta": false
+            },
+            {
+              "testo_risposta": "Terra", "corretta": false
+            },
+            {
+              "testo_risposta": "Venere", "corretta": false
+            },
+            {
+              "testo_risposta": "Mercurio", "corretta": true
+            }
+          ]
+        },
+        {
+          "testo": "Chi ha composto le <Quattro Stagioni>?",
+          "risposte": [
+            {
+              "testo_risposta": "Antonio Vivaldi", "corretta": true
+            },
+            {
+              "testo_risposta": "Wolfgang Amadeus Mozart", "corretta": false
+            },
+            {
+              "testo_risposta": "Ludwig van Beethoven", "corretta": false
+            },
+            {
+              "testo_risposta": "Johann Sebastian Bach", "corretta": false
+            }
+          ]
+        }
     ]
 }

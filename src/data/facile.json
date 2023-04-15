@@ -259,5 +259,92 @@
             }
           ]
         }
+    ],
+    "Cultura Generale": [
+        {
+          "testo": "Qual è la capitale dell'Italia?",
+          "risposte": [
+            {
+              "testo_risposta": "Milano", "corretta": false
+            },
+            {
+              "testo_risposta": "Roma", "corretta": true
+            },
+            {
+              "testo_risposta": "Firenze", "corretta": false
+            },
+            {
+              "testo_risposta": "Torino", "corretta": false
+            }
+          ]
+        },
+        {
+          "testo": "Chi ha dipindo la Gioconda?",
+          "risposte": [
+            {
+              "testo_risposta": "Leonardo da Vinci", "corretta": true
+            },
+            {
+              "testo_risposta": "Michelangelo", "corretta": false
+            },
+            {
+              "testo_risposta": "Raffaello", "corretta": false
+            },
+            {
+              "testo_risposta": "Botticelli", "corretta": false
+            }
+          ]
+        },
+        {
+          "testo": "In che anno è iniziata la Seconda Guerra Mondiale?",
+          "risposte": [
+            {
+              "testo_risposta": "1945", "corretta": false
+            },
+            {
+              "testo_risposta": "1914", "corretta": false
+            },
+            {
+              "testo_risposta": "1939", "corretta": true
+            },
+            {
+              "testo_risposta": "1950", "corretta": false
+            }
+          ]
+        },
+        {
+          "testo": "Qual è il fiume più lungo d'Italia?",
+          "risposte": [
+            {
+              "testo_risposta": "Tevere", "corretta": false
+            },
+            {
+              "testo_risposta": "Adige", "corretta": false
+            },
+            {
+              "testo_risposta": "Arno", "corretta": false
+            },
+            {
+              "testo_risposta": "Po", "corretta": true
+            }
+          ]
+        },
+        {
+          "testo": "Chi ha scritto la <Divina Commedia>?",
+          "risposte": [
+            {
+              "testo_risposta": "Giovanni Boccaccio", "corretta": false
+            },
+            {
+              "testo_risposta": "Francesco Petrarca", "corretta": false
+            },
+            {
+              "testo_risposta": "Dante Alighieri", "corretta": true
+            },
+            {
+              "testo_risposta": "Ludovico Ariosto", "corretta": false
+            }
+          ]
+        }
     ]
 }
