@@ -1,0 +1,350 @@
+{
+    "Matematica": [
+      {
+        "testo": "Se 1=5, 2=7000, 3=60596 e 4=652387. 5 è uguale a cosa?",
+        "risposte": [
+          {
+            "testo_risposta": "7832568", "corretta": false
+          },
+          {
+            "testo_risposta": "1", "corretta": true
+          },
+          {
+            "testo_risposta": "15000", "corretta": false
+          },
+          {
+            "testo_risposta": "8", "corretta": false
+          }
+        ]
+      },
+      {
+        "testo": "Se 5 gatti catturano 5 topi in 5 minuti, quanti gatti ci vogliono per catturare 100 topi in 100 minuti?",
+        "risposte": [
+          {
+            "testo_risposta": "25", "corretta": false
+          },
+          {
+            "testo_risposta": "5", "corretta": true
+          },
+          {
+            "testo_risposta": "125", "corretta": false
+          },
+          {
+            "testo_risposta": "15", "corretta": false
+          }
+        ]
+      },
+      {
+        "testo": "Padre e figlio hanno 36 anni in 2. Sapendo che il padre ha 30 anni più del figlio, quanti anni ha il figlio?",
+        "risposte": [
+          {
+            "testo_risposta": "6", "corretta": false
+          },
+          {
+            "testo_risposta": "30", "corretta": false
+          },
+          {
+            "testo_risposta": "Non si può determinare", "corretta": false
+          },
+          {
+            "testo_risposta": "3", "corretta": true
+          }
+        ]
+      },
+      {
+        "testo": "Qual è il numero che, diviso per la sua metà, dà il suo doppio?",
+        "risposte": [
+          {
+            "testo_risposta": "2", "corretta": false
+          },
+          {
+            "testo_risposta": "1", "corretta": true
+          },
+          {
+            "testo_risposta": "0.5", "corretta": false
+          },
+          {
+            "testo_risposta": "0", "corretta": false
+          }
+        ]
+      },
+      {
+        "testo": "In un barattolo ci sono 132 caramelle. Se le mangio tutte tranne 21, quante caramelle rimangono?",
+        "risposte": [
+          {
+            "testo_risposta": "21", "corretta": true
+          },
+          {
+            "testo_risposta": "111", "corretta": false
+          },
+          {
+            "testo_risposta": "Nessuna", "corretta": false
+          },
+          {
+            "testo_risposta": "Tutte", "corretta": false
+          }
+        ]
+      }
+    ],
+    "Logica": [
+        {
+          "testo": "Come continua la successione <7,21,36,52>?",
+          "risposte": [
+            {
+              "testo_risposta": "68", "corretta": false
+            },
+            {
+              "testo_risposta": "70", "corretta": false
+            },
+            {
+              "testo_risposta": "71", "corretta": false
+            },
+            {
+              "testo_risposta": "69", "corretta": true
+            }
+          ]
+        },
+        {
+          "testo": "Se ORO = 42 e RAME = 33, a cosa è uguale MARMO?",
+          "risposte": [
+            {
+              "testo_risposta": "14", "corretta": false
+            },
+            {
+              "testo_risposta": "52", "corretta": true
+            },
+            {
+              "testo_risposta": "48", "corretta": false
+            },
+            {
+              "testo_risposta": "85", "corretta": false
+            }
+          ]
+        },
+        {
+          "testo": "Qual è il numero maggiore tra i seguenti?",
+          "risposte": [
+            {
+              "testo_risposta": "5/3", "corretta": true
+            },
+            {
+              "testo_risposta": "1/3", "corretta": false
+            },
+            {
+              "testo_risposta": "5/13", "corretta": false
+            },
+            {
+              "testo_risposta": "-3", "corretta": false
+            }
+          ]
+        },
+        {
+          "testo": "Un treno ha percorso i 4/5 del tragitto. Sapendo che è partito da 36 minuti, tra quanto arriverà a destinazione?",
+          "risposte": [
+            {
+              "testo_risposta": "8", "corretta": false
+            },
+            {
+              "testo_risposta": "7", "corretta": false
+            },
+            {
+              "testo_risposta": "10", "corretta": false
+            },
+            {
+              "testo_risposta": "9", "corretta": true
+            }
+          ]
+        },
+        {
+          "testo": "Una macchina consuma 25 litri di benzina per percorrere 160 km. Quanti chilometri percorrerebbe con 40 litri?",
+          "risposte": [
+            {
+              "testo_risposta": "222 km", "corretta": false
+            },
+            {
+              "testo_risposta": "256 km", "corretta": true
+            },
+            {
+              "testo_risposta": "238 km", "corretta": false
+            },
+            {
+              "testo_risposta": "234 km", "corretta": false
+            }
+          ]
+        }
+    ],
+    "Grammatica": [
+      {
+        "testo": "Qual è il congiuntivo trapassato di <essere> (io)?",
+        "risposte": [
+          {
+            "testo_risposta": "Fossi stato", "corretta": true
+          },
+          {
+            "testo_risposta": "Sarei stato", "corretta": false
+          },
+          {
+            "testo_risposta": "Sia stato", "corretta": false
+          },
+          {
+            "testo_risposta": "Ero stato", "corretta": false
+          }
+        ]
+      },
+      {
+        "testo": "Qual è il gerundio di <porre>?",
+        "risposte": [
+          {
+            "testo_risposta": "Posto", "corretta": false
+          },
+          {
+            "testo_risposta": "Porrò", "corretta": false
+          },
+          {
+            "testo_risposta": "Ponendo", "corretta": true
+          },
+          {
+            "testo_risposta": "Ponente", "corretta": false
+          }
+        ]
+      },
+      {
+        "testo": "Qual è il plurale di <crisi>?",
+        "risposte": [
+          {
+            "testo_risposta": "Crises", "corretta": false
+          },
+          {
+            "testo_risposta": "Crisa", "corretta": false
+          },
+          {
+            "testo_risposta": "Crisis", "corretta": false
+          },
+          {
+            "testo_risposta": "Crisi", "corretta": true
+          }
+        ]
+      },
+      {
+        "testo": "Qual è il femminile di <poeta>?",
+        "risposte": [
+          {
+            "testo_risposta": "Poetaessa", "corretta": false
+          },
+          {
+            "testo_risposta": "Poetessa", "corretta": true
+          },
+          {
+            "testo_risposta": "Poetia", "corretta": false
+          },
+          {
+            "testo_risposta": "Poetessaessa", "corretta": false
+          }
+        ]
+      },
+      {
+        "testo": "Qual è il condizionale passato di <potere> (noi)?",
+        "risposte": [
+          {
+            "testo_risposta": "Potessimo", "corretta": false
+          },
+          {
+            "testo_risposta": "Potremmo", "corretta": false
+          },
+          {
+            "testo_risposta": "Siamo potuti", "corretta": false
+          },
+          {
+            "testo_risposta": "Saremmo potuti", "corretta": true
+          }
+        ]
+      }
+    ],
+    "Cultura Generale": [
+        {
+          "testo": "Chi ha scritto <Il Processo>?",
+          "risposte": [
+            {
+              "testo_risposta": "Franz Kafka", "corretta": true
+            },
+            {
+              "testo_risposta": "Fyodor Dostoevsky", "corretta": false
+            },
+            {
+              "testo_risposta": "Leo Tolstoy", "corretta": false
+            },
+            {
+              "testo_risposta": "Gustave Flaubert", "corretta": false
+            }
+          ]
+        },
+        {
+          "testo": "In che anno è stato fondato il Partito Comunista Cinese?",
+          "risposte": [
+            {
+              "testo_risposta": "1921", "corretta": true
+            },
+            {
+              "testo_risposta": "1912", "corretta": false
+            },
+            {
+              "testo_risposta": "1935", "corretta": false
+            },
+            {
+              "testo_risposta": "1949", "corretta": false
+            }
+          ]
+        },
+        {
+          "testo": "Chi ha dipinto <Il Bacio>?",
+          "risposte": [
+            {
+              "testo_risposta": "Edvard Munch", "corretta": false
+            },
+            {
+              "testo_risposta": "Gustav Klimt", "corretta": true
+            },
+            {
+              "testo_risposta": "Henri Matisse", "corretta": false
+            },
+            {
+              "testo_risposta": "Pierre-Auguste Renoir", "corretta": false
+            }
+          ]
+        },
+        {
+          "testo": "Qual è il fiume più lungo del mondo?",
+          "risposte": [
+            {
+              "testo_risposta": "Mississippi", "corretta": false
+            },
+            {
+              "testo_risposta": "Yangtze", "corretta": false
+            },
+            {
+              "testo_risposta": "Amazonas", "corretta": false
+            },
+            {
+              "testo_risposta": "Nilo", "corretta": true
+            }
+          ]
+        },
+        {
+          "testo": "Chi ha scritto <Ulisse>?",
+          "risposte": [
+            {
+              "testo_risposta": "James Joyce", "corretta": true
+            },
+            {
+              "testo_risposta": "Ernest Hemingway", "corretta": false
+            },
+            {
+              "testo_risposta": "Virginia Woolf", "corretta": false
+            },
+            {
+              "testo_risposta": "William Faulkner", "corretta": false
+            }
+          ]
+        }
+    ]
+}

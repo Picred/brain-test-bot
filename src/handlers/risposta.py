@@ -1,13 +1,11 @@
 from telegram import Update
 from telegram.ext import CallbackContext
-from .domanda import domanda
+from .domanda import domanda, load_file
 import json
 
-with open('src/data/facile.json', 'r', encoding="utf-8") as f:
-    data = json.load(f)['domande']
 
 def risposta(update: Update, context: CallbackContext) -> None:
-    # Numero della domanda corrente
+    data = load_file(context)
     domanda_corrente = context.user_data['domanda_corrente']
     query = update.callback_query
     question_index, answer_index = map(int, query.data.split(':'))

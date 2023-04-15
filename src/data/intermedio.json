@@ -1,0 +1,350 @@
+{
+    "Matematica": [
+      {
+        "testo": "Qual è il valore dell'espressione 2(3x - 4) + 5x quando x = 2?",
+        "risposte": [
+          {
+            "testo_risposta": "18", "corretta": false
+          },
+          {
+            "testo_risposta": "9", "corretta": false
+          },
+          {
+            "testo_risposta": "12", "corretta": true
+          },
+          {
+            "testo_risposta": "15", "corretta": false
+          }
+        ]
+      },
+      {
+        "testo": "Quale delle seguenti espressioni è equivalente a 3x + 6y - 2x + 4y?",
+        "risposte": [
+          {
+            "testo_risposta": "x + 10y", "corretta": true
+          },
+          {
+            "testo_risposta": "x + 2y", "corretta": false
+          },
+          {
+            "testo_risposta": " x + 8y", "corretta": false
+          },
+          {
+            "testo_risposta": "-x + 6y", "corretta": false
+          }
+        ]
+      },
+      {
+        "testo": "Quale delle seguenti espressioni è equivalente a 3x² - 6x + 9?",
+        "risposte": [
+          {
+            "testo_risposta": "(x + 3)²", "corretta": true
+          },
+          {
+            "testo_risposta": "(3x - 3)²", "corretta": false
+          },
+          {
+            "testo_risposta": "(x - 3)²", "corretta": false
+          },
+          {
+            "testo_risposta": "(3x + 3)²", "corretta": false
+          }
+        ]
+      },
+      {
+        "testo": "Qual è la lunghezza dell'ipotenusa di un triangolo rettangolo con le lunghezze dei cateti di 5 cm e 12 cm?",
+        "risposte": [
+          {
+            "testo_risposta": "13 cm", "corretta": true
+          },
+          {
+            "testo_risposta": "15 cm", "corretta": false
+          },
+          {
+            "testo_risposta": "17 cm", "corretta": false
+          },
+          {
+            "testo_risposta": "19 cm", "corretta": false
+          }
+        ]
+      },
+      {
+        "testo": "A quanti chilometri corrispondono 326 millimetri?",
+        "risposte": [
+          {
+            "testo_risposta": "32,6 km", "corretta": false
+          },
+          {
+            "testo_risposta": "326 km", "corretta": false
+          },
+          {
+            "testo_risposta": "0,0326 km", "corretta": false
+          },
+          {
+            "testo_risposta": "0,000326 km", "corretta": true
+          }
+        ]
+      }
+    ],
+    "Logica": [
+        {
+          "testo": "Se ogni A è uguale a B, e ogni B è uguale a C, allora ogni A è uguale a:",
+          "risposte": [
+            {
+              "testo_risposta": "C", "corretta": true
+            },
+            {
+              "testo_risposta": "D", "corretta": false
+            },
+            {
+              "testo_risposta": "E", "corretta": false
+            },
+            {
+              "testo_risposta": "Non si può determinare", "corretta": false
+            }
+          ]
+        },
+        {
+          "testo": "Qual è il valore della proposizione <p AND q> se <p> è vero e <q> è falso?",
+          "risposte": [
+            {
+              "testo_risposta": "Non si può determinare", "corretta": false
+            },
+            {
+              "testo_risposta": "Conradittorio", "corretta": false
+            },
+            {
+              "testo_risposta": "vero", "corretta": false
+            },
+            {
+              "testo_risposta": "falso", "corretta": true
+            }
+          ]
+        },
+        {
+          "testo": "Quale delle seguenti proposizioni è equivalente a <se p, allora q>?",
+          "risposte": [
+            {
+              "testo_risposta": "p AND q", "corretta": false
+            },
+            {
+              "testo_risposta": "p OR q", "corretta": false
+            },
+            {
+              "testo_risposta": "NOT p OR q", "corretta": true
+            },
+            {
+              "testo_risposta": "NOT q OR p", "corretta": false
+            }
+          ]
+        },
+        {
+          "testo": "Quale delle seguenti proposizioni è equivalente a <non tutti gli studenti hanno passato l'esame>?",
+          "risposte": [
+            {
+              "testo_risposta": "Almeno uno studente ha fallito l'esame", "corretta": true
+            },
+            {
+              "testo_risposta": "Tutti gli studenti hanno passato l'esame", "corretta": false
+            },
+            {
+              "testo_risposta": "Nessuno degli studenti ha passato l'esame", "corretta": false
+            },
+            {
+              "testo_risposta": "Solo alcuni studenti hanno passato l'esame", "corretta": false
+            }
+          ]
+        },
+        {
+          "testo": " La somma dell'età di cinque ragazzi è 48. Tra 10 anni quale sarà la somma delle loro età?",
+          "risposte": [
+            {
+              "testo_risposta": "58", "corretta": false
+            },
+            {
+              "testo_risposta": "80", "corretta": false
+            },
+            {
+              "testo_risposta": "64", "corretta": false
+            },
+            {
+              "testo_risposta": "98", "corretta": true
+            }
+          ]
+        }
+    ],
+    "Grammatica": [
+        {
+          "testo": "Qual è il congiuntivo presente di <essere> (io)?",
+          "risposte": [
+            {
+              "testo_risposta": "Fossi", "corretta": false
+            },
+            {
+              "testo_risposta": "Sarei", "corretta": false
+            },
+            {
+              "testo_risposta": "Sono", "corretta": false
+            },
+            {
+              "testo_risposta": "Sia", "corretta": true
+            }
+          ]
+        },
+        {
+          "testo": "Qual è il condizionale presente di <avere> (tu)?",
+          "risposte": [
+            {
+              "testo_risposta": "Avessi", "corretta": false
+            },
+            {
+              "testo_risposta": "Hai", "corretta": false
+            },
+            {
+              "testo_risposta": "Avresti", "corretta": true
+            },
+            {
+              "testo_risposta": "Abbia", "corretta": false
+            }
+          ]
+        },
+        {
+          "testo": "Qual è l’imperativo di <andare> (noi)?",
+          "risposte": [
+            {
+              "testo_risposta": "Andiamo!", "corretta": true
+            },
+            {
+              "testo_risposta": "Andate!", "corretta": false
+            },
+            {
+              "testo_risposta": "Andassimo!", "corretta": false
+            },
+            {
+              "testo_risposta": "Andremo!", "corretta": false
+            }
+          ]
+        },
+        {
+          "testo": "Qual è il participio passato di <scrivere>?",
+          "risposte": [
+            {
+              "testo_risposta": "Scrivuto", "corretta": false
+            },
+            {
+              "testo_risposta": "Scritto", "corretta": true
+            },
+            {
+              "testo_risposta": "Scriverei", "corretta": false
+            },
+            {
+              "testo_risposta": "Scrivessi", "corretta": false
+            }
+          ]
+        },
+        {
+          "testo": "Qual è il plurale di <città>?",
+          "risposte": [
+            {
+              "testo_risposta": "Cittàs", "corretta": false
+            },
+            {
+              "testo_risposta": "Città", "corretta": true
+            },
+            {
+              "testo_risposta": "Cittài", "corretta": false
+            },
+            {
+              "testo_risposta": "Cittàe", "corretta": false
+            }
+          ]
+        }
+    ],
+    "Cultura Generale": [
+        {
+          "testo": "Chi ha inventato il telefono?",
+          "risposte": [
+            {
+              "testo_risposta": "Guglielmo Marconi", "corretta": false
+            },
+            {
+              "testo_risposta": "Nikola Tesla", "corretta": false
+            },
+            {
+              "testo_risposta": "Thomas Edison", "corretta": false
+            },
+            {
+              "testo_risposta": "Alexander Graham Bell", "corretta": true
+            }
+          ]
+        },
+        {
+          "testo": "In che anno è stato fondato l’Impero Romano?",
+          "risposte": [
+            {
+              "testo_risposta": "753 a.C.", "corretta": false
+            },
+            {
+              "testo_risposta": "509 a.C.", "corretta": false
+            },
+            {
+              "testo_risposta": "14 d.C.", "corretta": false
+            },
+            {
+              "testo_risposta": "27 a.C.", "corretta": true
+            }
+          ]
+        },
+        {
+          "testo": "Chi ha scoperto l’America?",
+          "risposte": [
+            {
+              "testo_risposta": "Amerigo Vespucci", "corretta": false
+            },
+            {
+              "testo_risposta": "Cristoforo Colombo", "corretta": true
+            },
+            {
+              "testo_risposta": "Marco Polo", "corretta": false
+            },
+            {
+              "testo_risposta": "Ferdinando Magellano", "corretta": false
+            }
+          ]
+        },
+        {
+          "testo": "Qual è il pianeta più vicino al Sole?",
+          "risposte": [
+            {
+              "testo_risposta": "Marte", "corretta": false
+            },
+            {
+              "testo_risposta": "Terra", "corretta": false
+            },
+            {
+              "testo_risposta": "Venere", "corretta": false
+            },
+            {
+              "testo_risposta": "Mercurio", "corretta": true
+            }
+          ]
+        },
+        {
+          "testo": "Chi ha composto le <Quattro Stagioni>?",
+          "risposte": [
+            {
+              "testo_risposta": "Antonio Vivaldi", "corretta": true
+            },
+            {
+              "testo_risposta": "Wolfgang Amadeus Mozart", "corretta": false
+            },
+            {
+              "testo_risposta": "Ludwig van Beethoven", "corretta": false
+            },
+            {
+              "testo_risposta": "Johann Sebastian Bach", "corretta": false
+            }
+          ]
+        }
+    ]
+}
