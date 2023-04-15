@@ -172,5 +172,92 @@
             }
           ]
         }
+    ],
+    "Grammatica": [
+        {
+          "testo": "Qual è il congiuntivo presente di <essere> (io)?",
+          "risposte": [
+            {
+              "testo_risposta": "Fossi", "corretta": false
+            },
+            {
+              "testo_risposta": "Sarei", "corretta": false
+            },
+            {
+              "testo_risposta": "Sono", "corretta": false
+            },
+            {
+              "testo_risposta": "Sia", "corretta": true
+            }
+          ]
+        },
+        {
+          "testo": "Qual è il condizionale presente di <avere> (tu)?",
+          "risposte": [
+            {
+              "testo_risposta": "Avessi", "corretta": false
+            },
+            {
+              "testo_risposta": "Hai", "corretta": false
+            },
+            {
+              "testo_risposta": "Avresti", "corretta": true
+            },
+            {
+              "testo_risposta": "Abbia", "corretta": false
+            }
+          ]
+        },
+        {
+          "testo": "Qual è l’imperativo di <andare> (noi)?",
+          "risposte": [
+            {
+              "testo_risposta": "Andiamo!", "corretta": true
+            },
+            {
+              "testo_risposta": "Andate!", "corretta": false
+            },
+            {
+              "testo_risposta": "Andassimo!", "corretta": false
+            },
+            {
+              "testo_risposta": "Andremo!", "corretta": false
+            }
+          ]
+        },
+        {
+          "testo": "Qual è il participio passato di <scrivere>?",
+          "risposte": [
+            {
+              "testo_risposta": "Scrivuto", "corretta": false
+            },
+            {
+              "testo_risposta": "Scritto", "corretta": true
+            },
+            {
+              "testo_risposta": "Scriverei", "corretta": false
+            },
+            {
+              "testo_risposta": "Scrivessi", "corretta": false
+            }
+          ]
+        },
+        {
+          "testo": "Qual è il plurale di <città>?",
+          "risposte": [
+            {
+              "testo_risposta": "Cittàs", "corretta": false
+            },
+            {
+              "testo_risposta": "Città", "corretta": true
+            },
+            {
+              "testo_risposta": "Cittài", "corretta": false
+            },
+            {
+              "testo_risposta": "Cittàe", "corretta": false
+            }
+          ]
+        }
     ]
 }

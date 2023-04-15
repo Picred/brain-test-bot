@@ -172,5 +172,92 @@
             }
           ]
         }
+    ],
+    "Grammatica": [
+      {
+        "testo": "Qual è il congiuntivo trapassato di <essere> (io)?",
+        "risposte": [
+          {
+            "testo_risposta": "Fossi stato", "corretta": true
+          },
+          {
+            "testo_risposta": "Sarei stato", "corretta": false
+          },
+          {
+            "testo_risposta": "Sia stato", "corretta": false
+          },
+          {
+            "testo_risposta": "Ero stato", "corretta": false
+          }
+        ]
+      },
+      {
+        "testo": "Qual è il gerundio di <porre>?",
+        "risposte": [
+          {
+            "testo_risposta": "Posto", "corretta": false
+          },
+          {
+            "testo_risposta": "Porrò", "corretta": false
+          },
+          {
+            "testo_risposta": "Ponendo", "corretta": true
+          },
+          {
+            "testo_risposta": "Ponente", "corretta": false
+          }
+        ]
+      },
+      {
+        "testo": "Qual è il plurale di <crisi>?",
+        "risposte": [
+          {
+            "testo_risposta": "Crises", "corretta": false
+          },
+          {
+            "testo_risposta": "Crisa", "corretta": false
+          },
+          {
+            "testo_risposta": "Crisis", "corretta": false
+          },
+          {
+            "testo_risposta": "Crisi", "corretta": true
+          }
+        ]
+      },
+      {
+        "testo": "Qual è il femminile di <poeta>?",
+        "risposte": [
+          {
+            "testo_risposta": "Poetaessa", "corretta": false
+          },
+          {
+            "testo_risposta": "Poetessa", "corretta": true
+          },
+          {
+            "testo_risposta": "Poetia", "corretta": false
+          },
+          {
+            "testo_risposta": "Poetessaessa", "corretta": false
+          }
+        ]
+      },
+      {
+        "testo": "Qual è il condizionale passato di <potere> (noi)?",
+        "risposte": [
+          {
+            "testo_risposta": "Potessimo", "corretta": false
+          },
+          {
+            "testo_risposta": "Potremmo", "corretta": false
+          },
+          {
+            "testo_risposta": "Siamo potuti", "corretta": false
+          },
+          {
+            "testo_risposta": "Saremmo potuti", "corretta": true
+          }
+        ]
+      }
     ]
 }

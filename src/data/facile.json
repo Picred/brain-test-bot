@@ -172,5 +172,92 @@
             }
           ]
         }
+    ],
+    "Grammatica": [
+        {
+          "testo": "Qual è il plurale di <casa>?",
+          "risposte": [
+            {
+              "testo_risposta": "Case", "corretta": true
+            },
+            {
+              "testo_risposta": "Casas", "corretta": false
+            },
+            {
+              "testo_risposta": "Casis", "corretta": false
+            },
+            {
+              "testo_risposta": "Casis", "corretta": false
+            }
+          ]
+        },
+        {
+          "testo": "Qual è il passato prossimo di <mangiare>?",
+          "risposte": [
+            {
+              "testo_risposta": "Mangiarei", "corretta": false
+            },
+            {
+              "testo_risposta": "Mangiava", "corretta": false
+            },
+            {
+              "testo_risposta": "Mangiato", "corretta": true
+            },
+            {
+              "testo_risposta": "Mangiassi", "corretta": false
+            }
+          ]
+        },
+        {
+          "testo": "Qual è il femminile di <amico>?",
+          "risposte": [
+            {
+              "testo_risposta": "Amicoa", "corretta": false
+            },
+            {
+              "testo_risposta": "Amici", "corretta": false
+            },
+            {
+              "testo_risposta": "Amica", "corretta": true
+            },
+            {
+              "testo_risposta": "Amiche", "corretta": false
+            }
+          ]
+        },
+        {
+          "testo": "Qual è il plurale di <uomo>?",
+          "risposte": [
+            {
+              "testo_risposta": "Uoma", "corretta": false
+            },
+            {
+              "testo_risposta": "Uomos", "corretta": false
+            },
+            {
+              "testo_risposta": "Uomini", "corretta": true
+            },
+            {
+              "testo_risposta": "Uomi", "corretta": false
+            }
+          ]
+        },
+        {
+          "testo": "Qual è il passato prossimo di <parlare>?",
+          "risposte": [
+            {
+              "testo_risposta": "Parlavi", "corretta": false
+            },
+            {
+              "testo_risposta": "Parnante", "corretta": false
+            },
+            {
+              "testo_risposta": "Parlerei", "corretta": false
+            },
+            {
+              "testo_risposta": "Parlato", "corretta": true
+            }
+          ]
+        }
     ]
 }
