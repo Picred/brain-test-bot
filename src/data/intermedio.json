@@ -1,0 +1,176 @@
+{
+    "Matematica": [
+      {
+        "testo": "Qual è il valore dell'espressione 2(3x - 4) + 5x quando x = 2?",
+        "risposte": [
+          {
+            "testo_risposta": "18", "corretta": false
+          },
+          {
+            "testo_risposta": "9", "corretta": false
+          },
+          {
+            "testo_risposta": "12", "corretta": true
+          },
+          {
+            "testo_risposta": "15", "corretta": false
+          }
+        ]
+      },
+      {
+        "testo": "Quale delle seguenti espressioni è equivalente a 3x + 6y - 2x + 4y?",
+        "risposte": [
+          {
+            "testo_risposta": "x + 10y", "corretta": true
+          },
+          {
+            "testo_risposta": "x + 2y", "corretta": false
+          },
+          {
+            "testo_risposta": " x + 8y", "corretta": false
+          },
+          {
+            "testo_risposta": "-x + 6y", "corretta": false
+          }
+        ]
+      },
+      {
+        "testo": "Quale delle seguenti espressioni è equivalente a 3x² - 6x + 9?",
+        "risposte": [
+          {
+            "testo_risposta": "(x + 3)²", "corretta": true
+          },
+          {
+            "testo_risposta": "(3x - 3)²", "corretta": false
+          },
+          {
+            "testo_risposta": "(x - 3)²", "corretta": false
+          },
+          {
+            "testo_risposta": "(3x + 3)²", "corretta": false
+          }
+        ]
+      },
+      {
+        "testo": "Qual è la lunghezza dell'ipotenusa di un triangolo rettangolo con le lunghezze dei cateti di 5 cm e 12 cm?",
+        "risposte": [
+          {
+            "testo_risposta": "13 cm", "corretta": true
+          },
+          {
+            "testo_risposta": "15 cm", "corretta": false
+          },
+          {
+            "testo_risposta": "17 cm", "corretta": false
+          },
+          {
+            "testo_risposta": "19 cm", "corretta": false
+          }
+        ]
+      },
+      {
+        "testo": "A quanti chilometri corrispondono 326 millimetri?",
+        "risposte": [
+          {
+            "testo_risposta": "32,6 km", "corretta": false
+          },
+          {
+            "testo_risposta": "326 km", "corretta": false
+          },
+          {
+            "testo_risposta": "0,0326 km", "corretta": false
+          },
+          {
+            "testo_risposta": "0,000326 km", "corretta": true
+          }
+        ]
+      }
+    ],
+    "Logica": [
+        {
+          "testo": "Se ogni A è uguale a B, e ogni B è uguale a C, allora ogni A è uguale a:",
+          "risposte": [
+            {
+              "testo_risposta": "C", "corretta": true
+            },
+            {
+              "testo_risposta": "D", "corretta": false
+            },
+            {
+              "testo_risposta": "E", "corretta": false
+            },
+            {
+              "testo_risposta": "Non si può determinare", "corretta": false
+            }
+          ]
+        },
+        {
+          "testo": "Qual è il valore della proposizione <p AND q> se <p> è vero e <q> è falso?",
+          "risposte": [
+            {
+              "testo_risposta": "Non si può determinare", "corretta": false
+            },
+            {
+              "testo_risposta": "Conradittorio", "corretta": false
+            },
+            {
+              "testo_risposta": "vero", "corretta": false
+            },
+            {
+              "testo_risposta": "falso", "corretta": true
+            }
+          ]
+        },
+        {
+          "testo": "Quale delle seguenti proposizioni è equivalente a <se p, allora q>?",
+          "risposte": [
+            {
+              "testo_risposta": "p AND q", "corretta": false
+            },
+            {
+              "testo_risposta": "p OR q", "corretta": false
+            },
+            {
+              "testo_risposta": "NOT p OR q", "corretta": true
+            },
+            {
+              "testo_risposta": "NOT q OR p", "corretta": false
+            }
+          ]
+        },
+        {
+          "testo": "Quale delle seguenti proposizioni è equivalente a <non tutti gli studenti hanno passato l'esame>?",
+          "risposte": [
+            {
+              "testo_risposta": "Almeno uno studente ha fallito l'esame", "corretta": true
+            },
+            {
+              "testo_risposta": "Tutti gli studenti hanno passato l'esame", "corretta": false
+            },
+            {
+              "testo_risposta": "Nessuno degli studenti ha passato l'esame", "corretta": false
+            },
+            {
+              "testo_risposta": "Solo alcuni studenti hanno passato l'esame", "corretta": false
+            }
+          ]
+        },
+        {
+          "testo": " La somma dell'età di cinque ragazzi è 48. Tra 10 anni quale sarà la somma delle loro età?",
+          "risposte": [
+            {
+              "testo_risposta": "58", "corretta": false
+            },
+            {
+              "testo_risposta": "80", "corretta": false
+            },
+            {
+              "testo_risposta": "64", "corretta": false
+            },
+            {
+              "testo_risposta": "98", "corretta": true
+            }
+          ]
+        }
+    ]
+}

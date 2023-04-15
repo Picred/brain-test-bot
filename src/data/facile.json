@@ -1,70 +1,176 @@
 {
-    "domande": [
+    "Matematica": [
+      {
+        "testo": "Se un pacchetto di biscotti costa 2 euro e ne compri 3, quanto spenderai in totale?",
+        "risposte": [
+          {
+            "testo_risposta": "6 euro", "corretta": true
+          },
+          {
+            "testo_risposta": "5 euro", "corretta": false
+          },
+          {
+            "testo_risposta": "9 euro", "corretta": false
+          },
+          {
+            "testo_risposta": "4 euro", "corretta": false
+          }
+        ]
+      },
+      {
+        "testo": "Se un triangolo ha una base di 5 cm e un’altezza di 10 cm, qual è la sua area?",
+        "risposte": [
+          {
+            "testo_risposta": "50 cm²", "corretta": false
+          },
+          {
+            "testo_risposta": "15 cm²", "corretta": false
+          },
+          {
+            "testo_risposta": "25 cm²", "corretta": true
+          },
+          {
+            "testo_risposta": "20 cm²", "corretta": false
+          }
+        ]
+      },
+      {
+        "testo": "Quanto fa 5x5?",
+        "risposte": [
+          {
+            "testo_risposta": "15", "corretta": false
+          },
+          {
+            "testo_risposta": "1", "corretta": false
+          },
+          {
+            "testo_risposta": "125", "corretta": false
+          },
+          {
+            "testo_risposta": "25", "corretta": true
+          }
+        ]
+      },
+      {
+        "testo": "In un piano sono presenti tre rette: A, B, C. Se A e B sono parallele a C, come sono A e B tra loro?",
+        "risposte": [
+          {
+            "testo_risposta": "Perpendicolari", "corretta": false
+          },
+          {
+            "testo_risposta": "Parallele", "corretta": true
+          },
+          {
+            "testo_risposta": "Incidenti", "corretta": false
+          },
+          {
+            "testo_risposta": "Sovrapposte", "corretta": false
+          }
+        ]
+      },
+      {
+        "testo": "A quanti decimetri corrispondono 3,26 centimetri?",
+        "risposte": [
+          {
+            "testo_risposta": "32,6 dm", "corretta": false
+          },
+          {
+            "testo_risposta": "326 dm", "corretta": false
+          },
+          {
+            "testo_risposta": "0,0326 dm", "corretta": false
+          },
+          {
+            "testo_risposta": "0,326 dm", "corretta": true
+          }
+        ]
+      }
+    ],
+    "Logica": [
         {
-            "categoria": "Matematica",
-            "testo": "Qual e' il risultato di 2+2?",
-            "risposte": [
-                {
-                    "testo": "3",
-                    "corretta": false
-                },
-                {
-                    "testo": "4",
-                    "corretta": true
-                },
-                {
-                    "testo": "5",
-                    "corretta": false
-                },
-                {
-                    "testo": "6",
-                    "corretta": false
-                }
-            ]
+          "testo": "In che modo il fratello di mio padre è imparentato con me?",
+          "risposte": [
+            {
+              "testo_risposta": "E' mio nipote", "corretta": false
+            },
+            {
+              "testo_risposta": "E' mio nonno", "corretta": false
+            },
+            {
+              "testo_risposta": "E' mio zio", "corretta": true
+            },
+            {
+              "testo_risposta": "E' mio suocero", "corretta": false
+            }
+          ]
         },
-
         {
-            "categoria": "Italiano",
-            "testo": "Chi ha scritto la Divina Commedia?",
-            "risposte": [
-                {
-                    "testo": "Dante Alighieri",
-                    "corretta": true
-                },
-                {
-                    "testo": "Petrarca",
-                    "corretta": false
-                },
-                {
-                    "testo": "Boccaccio",
-                    "corretta": false
-                },
-                {
-                    "testo": "Ariosto",
-                    "corretta": false
-                }
-            ]
+          "testo": "Quale lettera passa dall'essere una consonante a una vocale semplicemente capovolgendola?",
+          "risposte": [
+            {
+              "testo_risposta": "e", "corretta": false
+            },
+            {
+              "testo_risposta": "t", "corretta": false
+            },
+            {
+              "testo_risposta": "b", "corretta": false
+            },
+            {
+              "testo_risposta": "n", "corretta": true
+            }
+          ]
         },
         {
-            "testo": "Qual e' il risultato di 3*4?",
-            "risposte": [
-                {
-                    "testo": "7",
-                    "corretta": false
-                },
-                {
-                    "testo": "10",
-                    "corretta": false
-                },
-                {
-                    "testo": "11",
-                    "corretta": false
-                },
-                {
-                    "testo": "12",
-                    "corretta": true
-                }
-            ]
+          "testo": "Quale gruppo continua la seguente serie: 2Z3, 4Y5, 6X7",
+          "risposte": [
+            {
+              "testo_risposta": "8W9", "corretta": true
+            },
+            {
+              "testo_risposta": "12T14", "corretta": false
+            },
+            {
+              "testo_risposta": "8S8", "corretta": false
+            },
+            {
+              "testo_risposta": "8W7", "corretta": false
+            }
+          ]
+        },
+        {
+          "testo": "Qual è il modo più corretto di rispondere: 8+7 FA 16 oppure 8+7 FANNO 16?",
+          "risposte": [
+            {
+              "testo_risposta": "fa", "corretta": false
+            },
+            {
+              "testo_risposta": "fanno", "corretta": false
+            },
+            {
+              "testo_risposta": "entrambi i modi sono corretti", "corretta": true
+            },
+            {
+              "testo_risposta": "nessuna delle precedenti", "corretta": false
+            }
+          ]
+        },
+        {
+          "testo": "Quale animale mangia con la coda?",
+          "risposte": [
+            {
+              "testo_risposta": "Cane", "corretta": true
+            },
+            {
+              "testo_risposta": "Gatto", "corretta": false
+            },
+            {
+              "testo_risposta": "Cavallo", "corretta": false
+            },
+            {
+              "testo_risposta": "Tutte le risposte precedenti", "corretta": false
+            }
+          ]
         }
     ]
 }
