@@ -16,6 +16,7 @@ def risposta(update: Update, context: CallbackContext) -> None:
     # Verifica se la risposta è True
     if answer['corretta']:
         context.bot.send_message(chat_id=query.message.chat_id, text="Hai risposto correttamente!")
+        context.user_data['punteggio'] += 1 
     else:
         context.bot.send_message(chat_id=query.message.chat_id, text="Spiacente, la risposta è errata.")
 
@@ -25,4 +26,6 @@ def risposta(update: Update, context: CallbackContext) -> None:
     if domanda_corrente < len(data):
         domanda(update, context)
     else:
-        context.bot.send_message(chat_id=query.message.chat_id, text="Hai terminato il quiz!")
+        punteggio = context.user_data['punteggio']
+        context.bot.send_message(chat_id=query.message.chat_id, text=f"Hai terminato il quiz!\nHai totalizzato {punteggio}/{len(data)} punti!")
+
