@@ -1,9 +1,6 @@
-from telegram import Update, ReplyKeyboardRemove
-from telegram.ext import CallbackContext
+from telegram import ReplyKeyboardRemove
 from pytest_mock import MockerFixture
-
 from src.handlers.categoria_selezionata import categoria_selezionata
-
 
 def test_categoria_selezionata(mocker: MockerFixture):
     update = mocker.Mock()
