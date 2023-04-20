@@ -1,11 +1,10 @@
 from telegram.ext import (Updater, MessageHandler, CommandHandler, Filters, CallbackQueryHandler)
 import logging
-import json
 from src.handlers.start import start
 from src.handlers.quiz import quiz
 from src.handlers.risposta import risposta
-from src.handlers.categoria import categoria
-from src.handlers.difficolta import difficolta
+from src.handlers.categoria import categoria, categorie
+from src.handlers.difficolta import difficolta, livelli
 from src.handlers.add_commands import add_commands
 from src.handlers.livello_selezionato import livello_selezionato
 from src.handlers.categoria_selezionata import categoria_selezionata
@@ -15,11 +14,6 @@ from src.handlers.info import info
 with open("token.txt", "r", encoding="utf-8") as f:
     TOKEN = f.read().strip()
 
-with open('src/data/livelli.json', 'r', encoding="utf-8") as f:
-    livelli = list(json.load(f))
-
-with open('src/data/categorie.json', 'r', encoding="utf-8") as f:
-    categorie = list(json.load(f))
 
 def main() -> None:
     logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO)

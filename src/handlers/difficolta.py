@@ -1,13 +1,15 @@
 from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import CallbackContext
+from src.data.costanti import LIVELLO
+import json
 
-livelli = ["1: Facile", "2: Intermedio", "3: Difficile"]
+with open("src/data/livelli.json", "r", encoding="utf-8") as f:
+    livelli = json.load(f)
 
-# Imposta la difficolta
 def difficolta(update: Update, context: CallbackContext) -> None:
-    # Reset della difficoltà
-    if 'livello' in context.user_data:
-        del context.user_data['livello']
+    if LIVELLO in context.user_data:
+        del context.user_data[LIVELLO]
 
-    reply_markup = ReplyKeyboardMarkup([ [l] for l in livelli], resize_keyboard=True, one_time_keyboard=True)
+    categorie_reply_markup = [[l] for l in livelli]
+    reply_markup = ReplyKeyboardMarkup(categorie_reply_markup, resize_keyboard=True, one_time_keyboard=True)
     context.bot.sendMessage(chat_id=update.message.chat_id,text="Scegli il livello di difficoltà:",reply_markup=reply_markup)

@@ -1,6 +1,7 @@
 from telegram import ReplyKeyboardRemove
 from pytest_mock import MockerFixture
 from src.handlers.categoria_selezionata import categoria_selezionata
+from src.data.costanti import CATEGORIA
 
 def test_categoria_selezionata(mocker: MockerFixture):
     update = mocker.Mock()
@@ -15,4 +16,4 @@ def test_categoria_selezionata(mocker: MockerFixture):
     # categoria già selezionata
     update.message.text = 'Grammatica'
     categoria_selezionata(update, context)
-    context.bot.sendMessage.assert_called_with(chat_id=update.message.chat_id,text=f"La categoria {context.user_data['categoria']} è già stata selezionata. \nPer cambiare la categoria utilizzare /categoria", reply_markup=ReplyKeyboardRemove())
+    context.bot.sendMessage.assert_called_with(chat_id=update.message.chat_id,text=f"La categoria {context.user_data[CATEGORIA]} è già stata selezionata. \nPer cambiare la categoria utilizzare /categoria", reply_markup=ReplyKeyboardRemove())
