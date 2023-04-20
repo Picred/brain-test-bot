@@ -3,7 +3,7 @@ from telegram.ext import CallbackContext
 
 def info(update: Update, context: CallbackContext) -> None:
     username = str(update.message.chat.username)
-    if username is None:
+    if username == str(None):
         username = "Non impostato"
 
     categoria = "Da selezionare"
@@ -14,4 +14,4 @@ def info(update: Update, context: CallbackContext) -> None:
     if 'categoria' in context.user_data:
         categoria = context.user_data['categoria']
 
-    context.bot.sendMessage(chat_id=update.message.chat_id,text="Username: " + username + "\nCategoria: " + categoria + "\nDifficoltà: " + livello)
+    context.bot.sendMessage(chat_id=update.message.chat_id,text=f"Username: {username} \nCategoria: {categoria}\nDifficoltà: {livello}")

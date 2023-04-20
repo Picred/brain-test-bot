@@ -7,5 +7,4 @@ def categoria_selezionata(update: Update, context: CallbackContext) -> None:
         context.user_data['categoria'] = categoria
         context.bot.sendMessage(chat_id=update.message.chat_id,text=f"Hai selezionato la categoria {categoria}.", reply_markup=ReplyKeyboardRemove())
     else:
-        context.bot.sendMessage(chat_id=update.message.chat_id,text=f"La categoria {context.user_data['categoria']} è già stata selezionata.", reply_markup=ReplyKeyboardRemove())
-        context.bot.sendMessage(chat_id=update.message.chat_id,text="Per cambiare la categoria utilizzare /categoria")
+        context.bot.sendMessage(chat_id=update.message.chat_id,text=f"La categoria {context.user_data['categoria']} è già stata selezionata. \nPer cambiare la categoria utilizzare /categoria", reply_markup=ReplyKeyboardRemove())
