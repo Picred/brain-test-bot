@@ -30,6 +30,12 @@ jobs:
       - name: Lint with pylint
         run: |
           pylint src
+      - name: Crea token.txt
+        run: |
+          echo ${{ secrets.TOKEN }} > token.txt
       - name: Test with pytest
         run: |
           pytest --cov src --cov ./main.py tests/ --cov-fail-under=75
+      - name: Elimina token.txt 
+        run: |
+          rm -f token.txt
