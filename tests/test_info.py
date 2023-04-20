@@ -1,7 +1,5 @@
 from pytest_mock import MockerFixture
 from src.handlers.info import info
-from telegram import Update, Message, Chat
-from telegram.ext import CallbackContext
 
 
 def test_info(mocker: MockerFixture):

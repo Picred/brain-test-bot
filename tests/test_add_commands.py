@@ -1,6 +1,6 @@
 from telegram import BotCommand
 from telegram.ext import Updater
-from unittest.mock import Mock
+from pytest_mock import MockerFixture
 from src.handlers.add_commands import add_commands
 
 expected_commands = [
@@ -11,8 +11,8 @@ expected_commands = [
         BotCommand("quiz", "Inizia il quiz")
     ]
 
-def test_add_commands():
-    updater = Mock(Updater)
+def test_add_commands(mocker: MockerFixture):
+    updater = mocker.Mock(Updater)
 
     add_commands(updater)
 
