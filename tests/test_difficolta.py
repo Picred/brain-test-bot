@@ -1,5 +1,6 @@
 from pytest_mock import MockerFixture
 from src.handlers.difficolta import difficolta
+from src.data.costanti import LIVELLO
 
 def test_difficolta(mocker: MockerFixture):
     update = mocker.Mock()
@@ -8,14 +9,14 @@ def test_difficolta(mocker: MockerFixture):
 
     difficolta(update,context)
 
-    assert 'livello' not in context.user_data
+    assert LIVELLO not in context.user_data
 
 
 def test2_difficolta(mocker: MockerFixture):
     update = mocker.Mock()
     context = mocker.Mock()
-    context.user_data = {'livello' : '2: Intermedio'}
+    context.user_data = {LIVELLO : '2: Intermedio'}
 
     difficolta(update,context)
 
-    assert 'livello' not in context.user_data
+    assert LIVELLO not in context.user_data
