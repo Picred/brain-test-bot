@@ -28,7 +28,7 @@ def load_file(context: CallbackContext) -> dict:
     elif context.user_data[LIVELLO] == "3: Difficile":
         path = 'difficile.json'
 
-    f = open(f'src/data/{path}', 'r', encoding="utf-8")
-    data = json.load(f)[f"{context.user_data[CATEGORIA]}"]
+    with open(f'src/data/{path}', 'r', encoding="utf-8") as f:
+        data = json.load(f)[f"{context.user_data[CATEGORIA]}"]
 
     return data
