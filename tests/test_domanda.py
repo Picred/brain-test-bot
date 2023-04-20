@@ -1,11 +1,12 @@
 from pytest_mock import MockerFixture
 from src.handlers.domanda import domanda
 from unittest.mock import patch
+from src.data.costanti import DOMANDA_CORRENTE
 
 def test_domanda(mocker: MockerFixture):
     update = mocker.Mock()
     context = mocker.Mock()
-    context.user_data = {'domanda_corrente': 0}
+    context.user_data = {DOMANDA_CORRENTE: 0}
 
     data = [
         {
