@@ -48,9 +48,9 @@ def genera_commento(update: Update, context: CallbackContext) -> None:
     
     if punteggio < 2:
         key = "0 punti"
-    elif 2 <= punteggio < 5:
+    elif 2 <= punteggio < 4:
         key = "3 punti"
-    elif 3 < punteggio <= 5:
+    elif punteggio > 4:
         key = "5 punti"
 
     commento = data[0][key]
