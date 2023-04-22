@@ -4,30 +4,43 @@ from src.data.costanti import DOMANDA_CORRENTE, PUNTEGGIO, CATEGORIA
 from .domanda import domanda, load_file
 import json
 
-def risposta(update: Update, context: CallbackContext) -> None:
+def risposta(update: Update, context: CallbackContext,rm_id = None) -> None:
     data = load_file(context)
+    chat_id=update.effective_chat.id
     domanda_corrente = context.user_data[DOMANDA_CORRENTE]
     query = update.callback_query
 
-    question_index, answer_index = map(int, query.data.split(':'))
-    question = data[question_index]
-    answer = question['risposte'][answer_index]
+    if rm_id is not None:
+        context.bot.editMessageReplyMarkup(chat_id=chat_id, message_id=rm_id)
 
-    # Rimuove la tastiera con le risposte
-    context.bot.editMessageReplyMarkup(chat_id=query.message.chat_id, message_id=query.message.message_id)
+    if query is not None:
+        jobs = context.job_queue.jobs()
+        for j in jobs: j.remove()
 
-    if answer['corretta']:
-        esito = "Hai risposto correttamente!"
-        context.user_data[PUNTEGGIO] += 1 
+        question_index, answer_index = map(int, query.data.split(':'))
+        question = data[question_index]
+        answer = question['risposte'][answer_index]
+
+        # Rimuove la tastiera con le risposte
+        context.bot.editMessageReplyMarkup(chat_id=chat_id, message_id=query.message.message_id)
+
+        if answer['corretta']:
+            esito = "Hai risposto correttamente!"
+            context.user_data[PUNTEGGIO] += 1 
+        else:
+            esito = "Spiacente, la risposta è errata."
+            # Trovo la risposta corretta
+            risposte_domanda = data[question_index]['risposte']
+            indice_risposta_corretta = next(i for i, r in enumerate(risposte_domanda) if r['corretta'] == True)
+            risposta_corretta = risposte_domanda[indice_risposta_corretta]['testo_risposta']
+            context.bot.sendMessage(chat_id=chat_id, text=f"La risposta corretta era \"{risposta_corretta}\"")
+
+        context.bot.send_message(chat_id=chat_id, text=esito)
+    
     else:
-        esito = "Spiacente, la risposta è errata."
-        # Trovo la risposta corretta
-        risposte_domanda = data[question_index]['risposte']
-        indice_risposta_corretta = next(i for i, r in enumerate(risposte_domanda) if r['corretta'] == True)
-        risposta_corretta = risposte_domanda[indice_risposta_corretta]['testo_risposta']
-        context.bot.sendMessage(chat_id=query.message.chat_id, text=f"La risposta corretta era \"{risposta_corretta}\"")
+        context.bot.send_message(chat_id=chat_id, text="Tempo scaduto!")
 
-    context.bot.send_message(chat_id=query.message.chat_id, text=esito)
+    update.callback_query=None
 
     domanda_corrente += 1
     context.user_data[DOMANDA_CORRENTE] = domanda_corrente
@@ -36,7 +49,7 @@ def risposta(update: Update, context: CallbackContext) -> None:
         domanda(update, context)
     else:
         punteggio = context.user_data[PUNTEGGIO]
-        context.bot.send_message(chat_id=query.message.chat_id, text=f"Hai terminato il quiz!\nHai totalizzato {punteggio}/{len(data)} punti!")
+        context.bot.send_message(chat_id=chat_id, text=f"Hai terminato il quiz!\nHai totalizzato {punteggio}/{len(data)} punti!")
         genera_commento(update, context)
 
 

@@ -17,7 +17,8 @@ def domanda(update: Update, context: CallbackContext) -> None:
         keyboard.append([button])
 
     reply_markup = InlineKeyboardMarkup(keyboard)
-    context.bot.send_message(chat_id=update.effective_chat.id, text=testo, reply_markup=reply_markup)
+    rm_message = context.bot.send_message(chat_id=update.effective_chat.id, text=testo, reply_markup=reply_markup)
+    context.job_queue.run_once(fine_timer,10,context=(update,context,rm_message.message_id))
 
 
 def load_file(context: CallbackContext) -> dict:
@@ -33,3 +34,9 @@ def load_file(context: CallbackContext) -> dict:
         data = json.load(f)[f"{context.user_data[CATEGORIA]}"]
 
     return data
+
+def fine_timer(context: CallbackContext) -> None:
+    args = context.job.context
+    from src.handlers.risposta import risposta
+    risposta(args[0],args[1],args[2])
+    
