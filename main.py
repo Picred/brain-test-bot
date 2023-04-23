@@ -27,7 +27,7 @@ def main() -> None:
     dp.add_handler(CommandHandler('difficolta', difficolta))
     dp.add_handler(CommandHandler('categoria', categoria))
     dp.add_handler(CommandHandler('info', info))
-    dp.add_handler(CommandHandler('quiz', quiz))
+    dp.add_handler(CommandHandler('quiz', quiz, pass_job_queue=True))
 
     dp.add_handler(MessageHandler(Filters.text & Filters.regex(f"({'|'.join(livelli)})"), livello_selezionato))
     dp.add_handler(MessageHandler(Filters.text & Filters.regex(f"({'|'.join(categorie)})"), categoria_selezionata))
