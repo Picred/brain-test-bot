@@ -33,14 +33,3 @@ def risposta(update: Update, context: CallbackContext) -> None:
     context.bot.send_message(chat_id=chat_id, text=esito)
 
     prossima_domanda(update,context,data)
-
-
-def risposta_vuota(update: Update, context: CallbackContext,rm_id: int) -> None:
-    update.callback_query=None
-    data = load_file(context)
-    chat_id=update.effective_chat.id
-
-    context.bot.sendMessage(chat_id=chat_id,text="Tempo scaduto!")
-    context.bot.editMessageReplyMarkup(chat_id=chat_id, message_id=rm_id)
-
-    prossima_domanda(update,context,data)

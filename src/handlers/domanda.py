@@ -1,7 +1,6 @@
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import CallbackContext
 from src.data.costanti import DOMANDA_CORRENTE, PUNTEGGIO
-from src.handlers.timer import timer
 from src.handlers.durata_timer import durata_timer
 from src.handlers.load_file import load_file
 from src.handlers.genera_commento import genera_commento
@@ -23,7 +22,7 @@ def domanda(update: Update, context: CallbackContext) -> None:
     reply_markup = InlineKeyboardMarkup(keyboard)
     rm_message = context.bot.send_message(chat_id=update.effective_chat.id, text=testo, reply_markup=reply_markup)
     durata = durata_timer(context)
-    context.job_queue.run_once(timer,durata,context=(update,context,rm_message.message_id))
+    context.job_queue.run_once(timer,durata,context=(update,rm_message.message_id, context))
 
 
 def prossima_domanda(update:Update, context:CallbackContext,data: dict) -> None:
@@ -34,3 +33,19 @@ def prossima_domanda(update:Update, context:CallbackContext,data: dict) -> None:
         punteggio = context.user_data[PUNTEGGIO]
         context.bot.send_message(chat_id=update.effective_chat.id, text=f"Hai terminato il quiz!\nHai totalizzato {punteggio}/{len(data)} punti!")
         genera_commento(update, context)
+
+
+def timer(call_context: CallbackContext) -> None:
+    args = call_context.job.context
+    update = args[0]
+    rm_id = args[1]
+    context = args[2]
+
+    update.callback_query=None
+    data = load_file(context)
+    chat_id=update.effective_chat.id
+
+    context.bot.sendMessage(chat_id=chat_id,text="Tempo scaduto!")
+    context.bot.editMessageReplyMarkup(chat_id=chat_id, message_id=rm_id)
+
+    prossima_domanda(update,context,data)
