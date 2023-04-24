@@ -12,12 +12,17 @@ def test_categoria_selezionata(mocker: MockerFixture):
     update.message.text = '1: Facile'
     livello = update.message.text
     livello_selezionato(update, context)
-    context.bot.sendMessage.assert_called_with(chat_id=update.message.chat_id,text=f"Hai selezionato il livello {livello}.", reply_markup=ReplyKeyboardRemove())
 
+    context.bot.sendMessage.assert_called()
+    assert context.bot.sendMessage.call_args[1]['chat_id'] == update.message.chat_id
+    assert context.bot.sendMessage.call_args[1]['text'] == f"Hai selezionato il livello {livello}."
+    assert isinstance(context.bot.sendMessage.call_args[1]['reply_markup'], ReplyKeyboardRemove)
     assert context.user_data[LIVELLO] == '1: Facile'
 
     update.message.text = '2: Intermedio'
     livello_selezionato(update, context)
 
-    context.bot.sendMessage.assert_called_with(chat_id=update.message.chat_id,text=f"Il livello {context.user_data[LIVELLO]} è già stato selezionato.\n Per cambiare la difficolta utilizzare /difficolta", reply_markup=ReplyKeyboardRemove())
+    assert context.bot.sendMessage.call_args[1]['chat_id'] == update.message.chat_id
+    assert context.bot.sendMessage.call_args[1]['text'] == f"Il livello {context.user_data[LIVELLO]} è già stato selezionato.\n Per cambiare la difficolta utilizzare /difficolta"
+    assert isinstance(context.bot.sendMessage.call_args[1]['reply_markup'], ReplyKeyboardRemove)
     assert context.user_data[LIVELLO] == '1: Facile'
