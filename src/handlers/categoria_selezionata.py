@@ -2,6 +2,7 @@ from telegram import Update, ReplyKeyboardRemove
 from telegram.ext import CallbackContext
 from src.data.costanti import CATEGORIA
 
+
 def categoria_selezionata(update: Update, context: CallbackContext) -> None:
     categoria = update.message.text
     if CATEGORIA not in context.user_data:
