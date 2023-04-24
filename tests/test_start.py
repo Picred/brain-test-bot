@@ -6,13 +6,9 @@ from telegram.ext import CallbackContext
 
 
 def test_start(mocker: MockerFixture) -> None:
-    # Arrange
     update = mocker.Mock(Update)
     context = mocker.Mock(CallbackContext)
 
-    # Act
     start(update, context)
 
-    # Assert
-    # verifica che la funzione sendMessage() del bot sia stata chiamata con gli argomenti corretti
     context.bot.sendMessage.assert_called_once_with(chat_id=update.message.chat_id, text=START_TXT)

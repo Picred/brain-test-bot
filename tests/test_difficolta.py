@@ -2,6 +2,7 @@ from pytest_mock import MockerFixture
 from src.handlers.difficolta import difficolta
 from src.data.costanti import LIVELLO
 
+
 def test_difficolta(mocker: MockerFixture):
     update = mocker.Mock()
     context = mocker.Mock()

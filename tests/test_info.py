@@ -7,21 +7,21 @@ def test_info(mocker: MockerFixture):
     update = mocker.Mock()
     context = mocker.Mock()
     context.user_data = {CATEGORIA:None, LIVELLO:None}
-    
+
     info(update,context)
 
-    assert context.user_data[LIVELLO] == None
-    assert context.user_data[CATEGORIA] == None
+    assert context.user_data[LIVELLO] is None
+    assert context.user_data[CATEGORIA] is None
 
 
 def test2_info(mocker: MockerFixture):
     update = mocker.Mock()
     context = mocker.Mock()
     context.user_data = {CATEGORIA:'Logica', LIVELLO:None}
-    
+
     info(update,context)
 
-    assert context.user_data[LIVELLO] == None
+    assert context.user_data[LIVELLO] is None
     assert context.user_data[CATEGORIA] == 'Logica'
 
 
@@ -29,7 +29,7 @@ def test3_info(mocker: MockerFixture):
     update = mocker.Mock()
     context = mocker.Mock()
     context.user_data = {CATEGORIA:'Logica', LIVELLO:'1: Facile'}
-    
+
     info(update,context)
 
     assert context.user_data[LIVELLO] == '1: Facile'
@@ -40,11 +40,11 @@ def test4_info(mocker: MockerFixture):
     update = mocker.Mock()
     context = mocker.Mock()
     context.user_data = {CATEGORIA: None, LIVELLO: '2: Intermedio'}
-    
+
     info(update,context)
 
     assert context.user_data[LIVELLO] == '2: Intermedio'
-    assert context.user_data[CATEGORIA] == None
+    assert context.user_data[CATEGORIA] is None
 
 
 def test5_info(mocker: MockerFixture):

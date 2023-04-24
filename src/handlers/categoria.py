@@ -9,7 +9,7 @@ with open("src/data/categorie.json", "r", encoding="utf-8") as f:
 def categoria(update: Update, context: CallbackContext) -> None:
     if CATEGORIA in context.user_data:
         del context.user_data[CATEGORIA]
-    
+
     categorie_reply_markup = [[c] for c in categorie]
     reply_markup = ReplyKeyboardMarkup(categorie_reply_markup, resize_keyboard=True, one_time_keyboard=True)
     context.bot.sendMessage(chat_id=update.message.chat_id,text="Scegli la categoria delle domande:", reply_markup=reply_markup)

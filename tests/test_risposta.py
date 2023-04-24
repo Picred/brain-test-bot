@@ -1,28 +1,8 @@
 from pytest_mock import MockerFixture
 from unittest.mock import patch
 from src.handlers.risposta import risposta
-from src.data.costanti import PUNTEGGIO
+from src.data.costanti import PUNTEGGIO, ESEMPIO_DATA as data
 
-
-data = [
-    {
-        "testo": "Questa è una domanda di prova",
-        'risposte' : [
-            {
-                "testo_risposta": "Risposta 1", "corretta": True
-            },
-          {
-            "testo_risposta": "Risposta 2", "corretta": False
-          },
-          {
-            "testo_risposta": "Risposta 3", "corretta": False
-          },
-          {
-            "testo_risposta": "Risposta 4", "corretta": False
-          }
-        ]
-      }
-    ]
 
 def test_risposta(mocker: MockerFixture) -> None:
     update=mocker.Mock()
@@ -43,7 +23,6 @@ def test_risposta(mocker: MockerFixture) -> None:
     context.bot.editMessageReplyMarkup.assert_called_once_with(chat_id=update.effective_chat.id, message_id=update.callback_query.message.message_id)
     context.bot.send_message.assert_called_once_with(chat_id=update.effective_chat.id,text="Hai risposto correttamente!")
     assert context.user_data[PUNTEGGIO] == 1
-            
 
 
 def test1_risposta(mocker: MockerFixture) -> None:
@@ -59,10 +38,7 @@ def test1_risposta(mocker: MockerFixture) -> None:
 
     with patch("src.handlers.risposta.load_file", return_value=data):
         with patch("src.handlers.risposta.prossima_domanda") as mocked_prossima_domanda:
-
             risposta(update,context)
-
-            
             mocked_prossima_domanda.assert_called_once_with(update,context,data)
 
     job.remove.assert_called_once()
@@ -70,4 +46,3 @@ def test1_risposta(mocker: MockerFixture) -> None:
     context.bot.sendMessage.assert_called_once_with(chat_id=update.effective_chat.id,text=f"La risposta corretta era \"{risposta_corretta}\"")
     context.bot.send_message.assert_called_once_with(chat_id=update.effective_chat.id,text="Spiacente, la risposta è errata.")
     assert context.user_data[PUNTEGGIO] == 0
-
