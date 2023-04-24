@@ -38,5 +38,10 @@ def main() -> None:
     updater.start_polling()
     updater.idle()
 
-if __name__ == "__main__":
-    main()
+
+def init() -> None:
+    if __name__=="__main__":
+        main()
+
+
+init()
