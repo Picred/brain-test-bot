@@ -11,6 +11,7 @@ expected_commands = [
         BotCommand("quiz", "Inizia il quiz")
     ]
 
+
 def test_add_commands(mocker: MockerFixture):
     updater = mocker.Mock(Updater)
 

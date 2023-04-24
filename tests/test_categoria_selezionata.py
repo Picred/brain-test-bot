@@ -3,6 +3,7 @@ from pytest_mock import MockerFixture
 from src.handlers.categoria_selezionata import categoria_selezionata
 from src.data.costanti import CATEGORIA
 
+
 def test_categoria_selezionata(mocker: MockerFixture):
     update = mocker.Mock()
     context = mocker.Mock()

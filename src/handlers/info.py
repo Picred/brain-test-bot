@@ -7,12 +7,8 @@ def info(update: Update, context: CallbackContext) -> None:
     if username == str(None):
         username = "Non impostato"
 
-    categoria = "Da selezionare"
-    livello = "Da selezionare"
-
-    if LIVELLO in context.user_data:
-        livello = context.user_data[LIVELLO]
-    if CATEGORIA in context.user_data:
-        categoria = context.user_data[CATEGORIA]
+    categoria = livello = "Da selezionare"
+    livello = context.user_data.get(LIVELLO, livello)
+    categoria = context.user_data.get(CATEGORIA, categoria)
 
     context.bot.sendMessage(chat_id=update.message.chat_id,text=f"Username: {username} \nCategoria: {categoria}\nDifficoltà: {livello}")

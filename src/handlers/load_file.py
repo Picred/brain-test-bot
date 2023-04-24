@@ -2,6 +2,7 @@ from telegram.ext import CallbackContext
 from src.data.costanti import LIVELLO, CATEGORIA
 import json
 
+
 def load_file(context: CallbackContext) -> dict:
     match context.user_data[LIVELLO]:
         case "1: Facile":
