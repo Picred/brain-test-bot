@@ -6,6 +6,7 @@ import json
 with open("src/data/livelli.json", "r", encoding="utf-8") as f:
     livelli = json.load(f)
 
+
 def difficolta(update: Update, context: CallbackContext) -> None:
     if LIVELLO in context.user_data:
         del context.user_data[LIVELLO]

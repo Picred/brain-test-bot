@@ -3,7 +3,7 @@ from src.data.costanti import LIVELLO
 from src.handlers.durata_timer import durata_timer
 
 
-def test_durata_timer(mocker: MockerFixture):
+def test_durata_timer(mocker: MockerFixture) -> None:
     context = mocker.Mock()
     context.user_data = {LIVELLO: '1: Facile'}
 
@@ -12,7 +12,7 @@ def test_durata_timer(mocker: MockerFixture):
     assert res == 10
 
 
-def test2_durata_timer(mocker: MockerFixture):
+def test2_durata_timer(mocker: MockerFixture) -> None:
     context = mocker.Mock()
     context.user_data = {LIVELLO: '2: Intermedio'}
 
@@ -21,7 +21,7 @@ def test2_durata_timer(mocker: MockerFixture):
     assert res == 7
 
 
-def test3_durata_timer(mocker: MockerFixture):
+def test3_durata_timer(mocker: MockerFixture) -> None:
     context = mocker.Mock()
     context.user_data = {LIVELLO: '3: Difficile'}
 

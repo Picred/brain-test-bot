@@ -4,7 +4,7 @@ from unittest.mock import patch
 from src.data.costanti import DOMANDA_CORRENTE, LIVELLO, ESEMPIO_DATA as data
 
 
-def test_domanda(mocker: MockerFixture):
+def test_domanda(mocker: MockerFixture) -> None:
     update = mocker.Mock()
     context = mocker.Mock()
     context.user_data = {DOMANDA_CORRENTE: 0, LIVELLO: '1: Facile'}

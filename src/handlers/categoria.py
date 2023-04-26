@@ -6,6 +6,7 @@ import json
 with open("src/data/categorie.json", "r", encoding="utf-8") as f:
     categorie = json.load(f)
 
+
 def categoria(update: Update, context: CallbackContext) -> None:
     if CATEGORIA in context.user_data:
         del context.user_data[CATEGORIA]

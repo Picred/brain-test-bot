@@ -3,7 +3,7 @@ from main import main
 
 
 @patch('main.Updater')
-def test_main(mock_updater):
+def test_main(mock_updater) -> None:
     main()
 
     assert mock_updater.return_value.dispatcher.add_handler.called

@@ -7,7 +7,7 @@ from telegram import Update
 import json
 
 
-def test_genera_commento(mocker: MockerFixture):
+def test_genera_commento(mocker: MockerFixture) -> None:
     update = mocker.Mock(Update)
     update.effective_chat.id = 12345
     context = mocker.Mock(CallbackContext)
@@ -20,7 +20,7 @@ def test_genera_commento(mocker: MockerFixture):
     context.bot.sendMessage.assert_called_with(chat_id=12345, text="commento1")
 
 
-def test2_genera_commento(mocker: MockerFixture):
+def test2_genera_commento(mocker: MockerFixture) -> None:
     update = mocker.Mock(Update)
     update.effective_chat.id = 12345
     context = mocker.Mock(CallbackContext)
@@ -33,7 +33,7 @@ def test2_genera_commento(mocker: MockerFixture):
     context.bot.sendMessage.assert_called_with(chat_id=12345, text="commento3")
 
 
-def test3_genera_commento(mocker: MockerFixture):
+def test3_genera_commento(mocker: MockerFixture) -> None:
     update = mocker.Mock(Update)
     update.effective_chat.id = 12345
     context = mocker.Mock(CallbackContext)

@@ -3,7 +3,7 @@ from src.handlers.info import info
 from src.data.costanti import LIVELLO, CATEGORIA
 
 
-def test_info(mocker: MockerFixture):
+def test_info(mocker: MockerFixture) -> None:
     update = mocker.Mock()
     context = mocker.Mock()
     context.user_data = {CATEGORIA:None, LIVELLO:None}
@@ -14,7 +14,7 @@ def test_info(mocker: MockerFixture):
     assert context.user_data[CATEGORIA] is None
 
 
-def test2_info(mocker: MockerFixture):
+def test2_info(mocker: MockerFixture) -> None:
     update = mocker.Mock()
     context = mocker.Mock()
     context.user_data = {CATEGORIA:'Logica', LIVELLO:None}
@@ -25,7 +25,7 @@ def test2_info(mocker: MockerFixture):
     assert context.user_data[CATEGORIA] == 'Logica'
 
 
-def test3_info(mocker: MockerFixture):
+def test3_info(mocker: MockerFixture) -> None:
     update = mocker.Mock()
     context = mocker.Mock()
     context.user_data = {CATEGORIA:'Logica', LIVELLO:'1: Facile'}
@@ -36,7 +36,7 @@ def test3_info(mocker: MockerFixture):
     assert context.user_data[CATEGORIA] == 'Logica'
 
 
-def test4_info(mocker: MockerFixture):
+def test4_info(mocker: MockerFixture) -> None:
     update = mocker.Mock()
     context = mocker.Mock()
     context.user_data = {CATEGORIA: None, LIVELLO: '2: Intermedio'}
@@ -47,7 +47,7 @@ def test4_info(mocker: MockerFixture):
     assert context.user_data[CATEGORIA] is None
 
 
-def test5_info(mocker: MockerFixture):
+def test5_info(mocker: MockerFixture) -> None:
     update = mocker.Mock()
     context = mocker.Mock()
     context.user_data = {CATEGORIA:'Logica', LIVELLO:'1: Facile'}

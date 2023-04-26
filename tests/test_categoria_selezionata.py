@@ -4,7 +4,7 @@ from src.handlers.categoria_selezionata import categoria_selezionata
 from src.data.costanti import CATEGORIA
 
 
-def test_categoria_selezionata(mocker: MockerFixture):
+def test_categoria_selezionata(mocker: MockerFixture) -> None:
     update = mocker.Mock()
     context = mocker.Mock()
     context.user_data = {}

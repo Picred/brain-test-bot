@@ -2,6 +2,7 @@ from telegram import Update
 from telegram.ext import CallbackContext
 from src.data.costanti import LIVELLO, CATEGORIA
 
+
 def info(update: Update, context: CallbackContext) -> None:
     username = str(update.message.chat.username)
     if username == str(None):
