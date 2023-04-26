@@ -12,7 +12,7 @@ expected_commands = [
     ]
 
 
-def test_add_commands(mocker: MockerFixture):
+def test_add_commands(mocker: MockerFixture) -> None:
     updater = mocker.Mock(Updater)
 
     add_commands(updater)

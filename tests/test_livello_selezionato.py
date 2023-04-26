@@ -4,7 +4,7 @@ from src.handlers.livello_selezionato import livello_selezionato
 from src.data.costanti import LIVELLO
 
 
-def test_categoria_selezionata(mocker: MockerFixture):
+def test_categoria_selezionata(mocker: MockerFixture) -> None:
     update = mocker.Mock()
     context = mocker.Mock()
     context.user_data = {}
