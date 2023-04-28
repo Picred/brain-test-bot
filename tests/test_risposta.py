@@ -1,3 +1,4 @@
+"""Test of the risposta function"""
 from pytest_mock import MockerFixture
 from unittest.mock import patch
 from src.handlers.risposta import risposta
@@ -5,6 +6,11 @@ from src.data.costanti import PUNTEGGIO, ESEMPIO_DATA as data
 
 
 def test_risposta(mocker: MockerFixture) -> None:
+    """Tests the risposta function.
+
+    Args:
+        mocker: mocker used to simulate events
+    """
     update=mocker.Mock()
     update.callback_query.data="0:0"
     context=mocker.Mock()
@@ -26,6 +32,11 @@ def test_risposta(mocker: MockerFixture) -> None:
 
 
 def test1_risposta(mocker: MockerFixture) -> None:
+    """Tests the risposta function.
+
+    Args:
+        mocker: mocker used to simulate events
+    """
     update=mocker.Mock()
     update.callback_query.data="0:1"
     context=mocker.Mock()

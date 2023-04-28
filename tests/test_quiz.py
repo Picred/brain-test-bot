@@ -1,9 +1,15 @@
+"""/quiz command test"""
 from pytest_mock import MockerFixture
 from src.handlers.quiz import quiz
 from src.data.costanti import LIVELLO, CATEGORIA, PUNTEGGIO, DOMANDA_CORRENTE
 
 
 def test_quiz(mocker: MockerFixture) -> None:
+    """Tests the /quiz command.
+
+    Args:
+        mocker: mocker used to simulate events
+    """
     update=mocker.Mock()
     context=mocker.Mock()
     context.user_data={LIVELLO : '1: Facile', CATEGORIA : 'Logica'}

@@ -1,3 +1,4 @@
+"""/quiz command"""
 from telegram import Update
 from telegram.ext import CallbackContext
 from src.data.costanti import PUNTEGGIO, DOMANDA_CORRENTE
@@ -5,6 +6,13 @@ from src.handlers.domanda import domanda
 
 
 def quiz(update: Update, context: CallbackContext) -> None:
+    """Called by the /quiz command.
+    Starts the quiz
+    
+    Args:
+        update: update event
+        context: context passed by the handler
+    """
     if DOMANDA_CORRENTE in context.user_data:
         del context.user_data[DOMANDA_CORRENTE]
 

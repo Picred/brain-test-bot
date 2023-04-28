@@ -1,3 +1,4 @@
+"""Answer module"""
 from telegram import Update
 from telegram.ext import CallbackContext
 from src.data.costanti import PUNTEGGIO
@@ -6,6 +7,12 @@ from src.handlers.domanda import prossima_domanda
 
 
 def risposta(update: Update, context: CallbackContext) -> None:
+    """Removes the timer from the jobs_queue and checks the correctness of the answer.
+
+    Args:
+        update: update event
+        context: context passed by the handler
+    """
     data = load_file(context)
     chat_id=update.effective_chat.id
     query = update.callback_query

@@ -1,3 +1,4 @@
+"""Comment module"""
 from telegram.ext import CallbackContext
 from telegram import Update
 from src.data.costanti import CATEGORIA, PUNTEGGIO
@@ -5,6 +6,12 @@ import json
 
 
 def genera_commento(update: Update, context: CallbackContext) -> None:
+    """Generates a comment when the quiz is ended.
+
+    Args:
+        update: update event
+        context: context passed by the handler
+    """
     with open('src/data/commenti.json', 'r', encoding='utf-8') as f:
         data = json.load(f)[context.user_data[CATEGORIA]]
 

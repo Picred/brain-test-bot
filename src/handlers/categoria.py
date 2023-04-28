@@ -1,3 +1,4 @@
+"""/categoria command"""
 from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import CallbackContext
 from src.data.costanti import CATEGORIA
@@ -8,6 +9,12 @@ with open("src/data/categorie.json", "r", encoding="utf-8") as f:
 
 
 def categoria(update: Update, context: CallbackContext) -> None:
+    """Sets the category of the questions.
+
+    Args:
+        update: update event
+        context: context passed by the handler
+    """
     if CATEGORIA in context.user_data:
         del context.user_data[CATEGORIA]
 

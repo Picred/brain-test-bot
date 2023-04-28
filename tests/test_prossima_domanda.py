@@ -1,3 +1,4 @@
+"""Test of the prossima_domanda function"""
 from unittest.mock import patch
 from pytest_mock import MockerFixture
 from src.handlers.domanda import prossima_domanda
@@ -5,6 +6,11 @@ from src.data.costanti import DOMANDA_CORRENTE, PUNTEGGIO
 
 
 def test_prossima_domanda(mocker: MockerFixture) -> None:
+    """Tests the prossima_domanda function.
+
+    Args:
+        mocker: mocker used to simulate events
+    """
     update=mocker.Mock()
     context=mocker.Mock()
     data=mocker.Mock()
@@ -18,6 +24,11 @@ def test_prossima_domanda(mocker: MockerFixture) -> None:
 
 
 def test1_prossima_domanda(mocker: MockerFixture) -> None:
+    """Tests the prossima_domanda function.
+
+    Args:
+        mocker: mocker used to simulate events
+    """
     update=mocker.Mock()
     context=mocker.Mock()
     data=mocker.Mock()

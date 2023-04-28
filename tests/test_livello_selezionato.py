@@ -1,3 +1,4 @@
+"""Test of the livello_selezionato function"""
 from telegram import ReplyKeyboardRemove
 from pytest_mock import MockerFixture
 from src.handlers.livello_selezionato import livello_selezionato
@@ -5,6 +6,11 @@ from src.data.costanti import LIVELLO
 
 
 def test_categoria_selezionata(mocker: MockerFixture) -> None:
+    """Tests the livello_selezionato function.
+
+    Args:
+        mocker: mocker used to simulate events
+    """
     update = mocker.Mock()
     context = mocker.Mock()
     context.user_data = {}

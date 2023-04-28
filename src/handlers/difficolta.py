@@ -1,3 +1,4 @@
+"""/difficolta command"""
 from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import CallbackContext
 from src.data.costanti import LIVELLO
@@ -8,6 +9,12 @@ with open("src/data/livelli.json", "r", encoding="utf-8") as f:
 
 
 def difficolta(update: Update, context: CallbackContext) -> None:
+    """Sets the difficulty of questions.
+
+    Args:
+        update: update event
+        context: context passed by the handler
+    """
     if LIVELLO in context.user_data:
         del context.user_data[LIVELLO]
 

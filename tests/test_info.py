@@ -1,9 +1,15 @@
+"""Test of the /info command"""
 from pytest_mock import MockerFixture
 from src.handlers.info import info
 from src.data.costanti import LIVELLO, CATEGORIA
 
 
 def test_info(mocker: MockerFixture) -> None:
+    """Tests the /info command.
+
+    Args:
+        mocker: mocker used to simulate events
+    """
     update = mocker.Mock()
     context = mocker.Mock()
     context.user_data = {CATEGORIA:None, LIVELLO:None}
@@ -15,6 +21,11 @@ def test_info(mocker: MockerFixture) -> None:
 
 
 def test2_info(mocker: MockerFixture) -> None:
+    """Tests the /info command.
+
+    Args:
+        mocker: mocker used to simulate events
+    """
     update = mocker.Mock()
     context = mocker.Mock()
     context.user_data = {CATEGORIA:'Logica', LIVELLO:None}
@@ -26,6 +37,11 @@ def test2_info(mocker: MockerFixture) -> None:
 
 
 def test3_info(mocker: MockerFixture) -> None:
+    """Tests the /info command.
+
+    Args:
+        mocker: mocker used to simulate events
+    """
     update = mocker.Mock()
     context = mocker.Mock()
     context.user_data = {CATEGORIA:'Logica', LIVELLO:'1: Facile'}
@@ -37,6 +53,11 @@ def test3_info(mocker: MockerFixture) -> None:
 
 
 def test4_info(mocker: MockerFixture) -> None:
+    """Tests the /info command.
+
+    Args:
+        mocker: mocker used to simulate events
+    """
     update = mocker.Mock()
     context = mocker.Mock()
     context.user_data = {CATEGORIA: None, LIVELLO: '2: Intermedio'}
@@ -48,6 +69,11 @@ def test4_info(mocker: MockerFixture) -> None:
 
 
 def test5_info(mocker: MockerFixture) -> None:
+    """Tests the /info command.
+
+    Args:
+        mocker: mocker used to simulate events
+    """
     update = mocker.Mock()
     context = mocker.Mock()
     context.user_data = {CATEGORIA:'Logica', LIVELLO:'1: Facile'}

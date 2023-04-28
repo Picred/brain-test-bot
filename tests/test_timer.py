@@ -1,3 +1,4 @@
+"""Timer test"""
 from pytest_mock import MockerFixture
 from unittest.mock import patch
 from src.handlers.domanda import timer
@@ -5,6 +6,11 @@ from src.data.costanti import ESEMPIO_DATA as mock_data
 
 
 def test_timer(mocker: MockerFixture) -> None:
+    """Tests the timer function.
+
+    Args:
+        mocker: mocker used to simulate events
+    """
     call_context = mocker.Mock()
     call_context.job.context = [mocker.Mock(), mocker.Mock(), mocker.Mock()]
     update = call_context.job.context[0]
@@ -21,6 +27,11 @@ def test_timer(mocker: MockerFixture) -> None:
 
 
 def test1_timer(mocker: MockerFixture) -> None:
+    """Tests the timer function.
+
+    Args:
+        mocker: mocker used to simulate events
+    """
     call_context = mocker.Mock()
     call_context.job.context = [mocker.Mock(), mocker.Mock(), mocker.Mock()]
     update = call_context.job.context[0]
