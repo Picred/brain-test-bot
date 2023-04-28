@@ -39,3 +39,13 @@ Siamo sempre alla ricerca di contributi e miglioramenti per Brain Test Bot. Se v
 Brain Test Bot è stato sviluppato da:
 - [Picred](https://github.com/Picred)
 - [Mattia Puglia](https://github.com/mattiapuglia)
+
+# Struttura del progetto
+```bash
+├───.github
+│   └───workflows # contiene i file per Github Actions
+├───src
+│   ├───data # contiene le costanti principali e i file delle domande del quiz
+│   └───handlers # contiene tutte le funzioni usate
+└───tests # contiene tutti i file per i test
+```
