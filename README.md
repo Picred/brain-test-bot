@@ -1,10 +1,14 @@
 # Brain Test Bot
-Brain Test Bot è un bot di Telegram che consente agli utenti di testare la loro intelligenza e le loro abilità cognitive attraverso una serie di quiz e rompicapi. Il bot presenta una vasta gamma di domande di diversi argomenti, tra cui:
+Brain Test Bot è un bot di Telegram che consente agli utenti di testare la loro intelligenza e le loro abilità cognitive attraverso una serie di quiz e rompicapi. Il bot presenta domande di diversi argomenti, tra cui:
 - Grammatica
 - Logica
 - Matematica
 - Cultura generale
 
+Sono inoltre presenti 3 tipi di difficoltà, quali:
+- Facile -> timer: 10s
+- Intermedio -> timer: 7s
+- Difficile -> timer: 5s
 # Installazione
 Per utilizzare Brain Test Bot, è necessario avere un account Telegram attivo. Dopo aver creato un nuovo bot Telegram tramite il BotFather, clona la repository e installa tutte le dipendenze necessarie utilizzando il seguente comando:
 
@@ -21,10 +25,11 @@ python main.py
 
 # Guida all'uso
 Seguire i seguenti passaggi al fine di evitare errori:
-0. Individuare la chat del proprio bot con l'aiuto di BotFather
-1. Per iniziare è necessario avviare il bot con il comando `/start`
-2. Successivamente si deve impostare la `/categoria` desiderata e quindi la `/difficolta` (_l'ordine di queste operazioni non è importante_)
-3. Iniziare il quiz con il comando `/quiz`
+1. Individuare la chat del proprio bot con l'aiuto di BotFather
+2. Per iniziare è necessario avviare il bot con il comando `/start`
+3. Successivamente si deve impostare la `/categoria` desiderata e quindi la `/difficolta` (_l'ordine di queste operazioni non è importante_)
+    - _NB: Il tempo a disposizione per ogni domanda diminuisce man mano che la difficoltà viene incrementata._
+4. Iniziare il quiz con il comando `/quiz`
 
 
 # Contributi
