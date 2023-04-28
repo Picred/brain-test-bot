@@ -1,3 +1,4 @@
+"""Test of the genera_commento function"""
 from pytest_mock import MockerFixture
 from src.handlers.genera_commento import genera_commento
 from src.data.costanti import PUNTEGGIO, CATEGORIA, ESEMPIO_COMMENTO as data
@@ -8,6 +9,11 @@ import json
 
 
 def test_genera_commento(mocker: MockerFixture) -> None:
+    """Tests the genera_commento function.
+
+    Args:
+        mocker: mocker used to simulate events
+    """
     update = mocker.Mock(Update)
     update.effective_chat.id = 12345
     context = mocker.Mock(CallbackContext)
@@ -21,6 +27,11 @@ def test_genera_commento(mocker: MockerFixture) -> None:
 
 
 def test2_genera_commento(mocker: MockerFixture) -> None:
+    """Tests the genera_commento function.
+
+    Args:
+        mocker: mocker used to simulate events
+    """
     update = mocker.Mock(Update)
     update.effective_chat.id = 12345
     context = mocker.Mock(CallbackContext)
@@ -34,6 +45,11 @@ def test2_genera_commento(mocker: MockerFixture) -> None:
 
 
 def test3_genera_commento(mocker: MockerFixture) -> None:
+    """Tests the genera_commento function.
+
+    Args:
+        mocker: mocker used to simulate events
+    """
     update = mocker.Mock(Update)
     update.effective_chat.id = 12345
     context = mocker.Mock(CallbackContext)

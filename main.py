@@ -1,3 +1,4 @@
+"""Main module"""
 from telegram.ext import (Updater, MessageHandler, CommandHandler, Filters, CallbackQueryHandler)
 import logging
 from src.handlers.start import start
@@ -16,6 +17,7 @@ with open("token.txt", "r", encoding="utf-8") as f:
 
 
 def main() -> None:
+    """Main function."""
     logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO)
     logging.info('Starting bot...')
 
@@ -40,6 +42,7 @@ def main() -> None:
 
 
 def init() -> None:
+    """Starts the bot."""
     if __name__=="__main__":
         main()
 

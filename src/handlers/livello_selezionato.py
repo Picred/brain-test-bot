@@ -1,9 +1,17 @@
+"""Selected difficulty module"""
 from telegram import Update, ReplyKeyboardRemove
 from telegram.ext import CallbackContext
 from src.data.costanti import LIVELLO
 
 
 def livello_selezionato(update: Update, context: CallbackContext) -> None:
+    """Caled by the filter text.
+    Filters the text sended and prohibits setting the difficulty without the use of the /difficolta command 
+
+    Args:
+        update: update event
+        context: context passed by the handler
+    """
     livello = update.message.text
 
     if LIVELLO not in context.user_data:

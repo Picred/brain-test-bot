@@ -1,3 +1,4 @@
+"""Quiz functions"""
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import CallbackContext
 from src.data.costanti import DOMANDA_CORRENTE, PUNTEGGIO
@@ -7,6 +8,12 @@ from src.handlers.genera_commento import genera_commento
 
 
 def domanda(update: Update, context: CallbackContext) -> None:
+    """Replies to the user with a keyboard that contains the question and all of possible answers and starts the timer.
+
+    Args:
+        update: update event
+        context: context passed by the handler
+    """
     data = load_file(context)
 
     domanda_corrente = context.user_data[DOMANDA_CORRENTE]
@@ -26,6 +33,13 @@ def domanda(update: Update, context: CallbackContext) -> None:
 
 
 def prossima_domanda(update:Update, context:CallbackContext,data: dict) -> None:
+    """Generates the following questions with the respective answers.
+
+    Args:
+        update: update event
+        context: context passed by the handler
+        data: file that contains all questions/answers
+    """
     context.user_data[DOMANDA_CORRENTE] += 1
     if context.user_data[DOMANDA_CORRENTE] < len(data):
         domanda(update, context)
@@ -36,6 +50,12 @@ def prossima_domanda(update:Update, context:CallbackContext,data: dict) -> None:
 
 
 def timer(call_context: CallbackContext) -> None:
+    """Sends a message when the timer is expired.
+    
+    Args:
+        update: update event
+        context: context passed by the handler
+    """
     args = call_context.job.context
     update = args[0]
     rm_id = args[1]

@@ -1,3 +1,4 @@
+"""Test of the add_commands function"""
 from telegram import BotCommand
 from telegram.ext import Updater
 from pytest_mock import MockerFixture
@@ -13,6 +14,11 @@ expected_commands = [
 
 
 def test_add_commands(mocker: MockerFixture) -> None:
+    """Tests the add_commands function.
+
+    Args:
+        mocker: mocker used to simulate events
+    """
     updater = mocker.Mock(Updater)
 
     add_commands(updater)

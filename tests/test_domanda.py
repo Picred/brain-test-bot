@@ -1,3 +1,4 @@
+"""Test of the domanda function"""
 from pytest_mock import MockerFixture
 from src.handlers.domanda import domanda
 from unittest.mock import patch
@@ -5,6 +6,11 @@ from src.data.costanti import DOMANDA_CORRENTE, LIVELLO, ESEMPIO_DATA as data
 
 
 def test_domanda(mocker: MockerFixture) -> None:
+    """Tests the domanda function.
+
+    Args:
+        mocker: mocker used to simulate events
+    """
     update = mocker.Mock()
     context = mocker.Mock()
     context.user_data = {DOMANDA_CORRENTE: 0, LIVELLO: '1: Facile'}
