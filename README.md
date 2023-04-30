@@ -1,4 +1,6 @@
 # Brain Test Bot
+[![CodeFactor](https://www.codefactor.io/repository/github/picred/brain-test-bot/badge)](https://www.codefactor.io/repository/github/picred/brain-test-bot)
+
 Brain Test Bot è un bot di Telegram che consente agli utenti di testare la loro intelligenza e le loro abilità cognitive attraverso una serie di quiz e rompicapi. Il bot presenta domande di diversi argomenti, tra cui:
 - Grammatica
 - Logica
