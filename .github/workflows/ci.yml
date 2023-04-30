@@ -36,6 +36,6 @@ jobs:
       - name: Test with pytest
         run: |
           pytest --cov=src --cov=main tests/ --cov-fail-under=75
-      - name: Delete token.txt 
+      - name: Delete token.txt
         run: |
           rm -f token.txt

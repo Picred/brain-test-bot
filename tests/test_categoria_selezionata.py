@@ -18,7 +18,7 @@ def test_categoria_selezionata(mocker: MockerFixture) -> None:
     update.message.text = 'Logica'
     categoria = update.message.text
     categoria_selezionata(update, context)
-    
+
     assert context.bot.sendMessage.call_args[1]['chat_id'] == update.message.chat_id
     assert context.bot.sendMessage.call_args[1]['text'] == f"Hai selezionato la categoria {categoria}."
     assert isinstance(context.bot.sendMessage.call_args[1]['reply_markup'], ReplyKeyboardRemove)
@@ -26,7 +26,7 @@ def test_categoria_selezionata(mocker: MockerFixture) -> None:
     # categoria già selezionata
     update.message.text = 'Grammatica'
     categoria_selezionata(update, context)
-    
+
     assert context.bot.sendMessage.call_args[1]['chat_id'] == update.message.chat_id
     assert context.bot.sendMessage.call_args[1]['text'] == f"La categoria {context.user_data[CATEGORIA]} è già stata selezionata. \nPer cambiare la categoria utilizzare /categoria"
     assert isinstance(context.bot.sendMessage.call_args[1]['reply_markup'], ReplyKeyboardRemove)
